@@ -1,14 +1,16 @@
 import React from 'react';
-import InstagramIcon from "@material-ui/icons/Instagram";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GithubIcon from '@material-ui/icons/GitHub';
 
 const Footer = () => {
   return ( 
     <div className='footer'>
         <div>
             {" "}
-            <InstagramIcon />{" "}
+            <LinkedInIcon />{" "}
+            <GithubIcon />{" "}
         </div>
-        <p> &copy; </p>
+        <p> &copy; Oliver Lopez portfolio 2022 </p>
     </div>
   );
 }
