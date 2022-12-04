@@ -7,7 +7,7 @@ const Nav = ({ showAbout, showProjects, showResume, showContact }) => {
       alignItems: 'center' }}>
 
     <div className='nav-item'>
-      <h1 onClick={{showAbout}} to="/About">About</h1>
+      <h1 onClick={{showAbout}}>About</h1>
       <h1 onClick={{showProjects}}>Projects</h1>
       <h1 onClick={{showResume}}>Resume</h1>
       <h1 onClick={{showContact}}>Contact</h1>

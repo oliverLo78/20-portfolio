@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 // TODO: Add a comment explaining how we are able to extract the key value pairs from props
 
 function NavTabs({ currentPage, handlePageChange }) {
@@ -7,18 +8,18 @@ function NavTabs({ currentPage, handlePageChange }) {
     <ul className="nav nav-tabs">
       <li className="nav-item">
         <a
-          href="/About"
-          onClick={() => handlePageChange('About')}
+          href="/Portfolio"
+          onClick={() => handlePageChange('Portfolio')}
           //*  TODO: BONUS: Add a comment explaining what kind of operator this is and what it is checking for
 
-          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
         >
-          Home
+          Portfolio
         </a>
       </li>
       <li className="nav-item">
         <a
-          href="#about"
+          href="/About"
           onClick={() => handlePageChange('About')}
           //  TODO: Add a comment explaining what this logic is doing
 
@@ -29,7 +30,7 @@ function NavTabs({ currentPage, handlePageChange }) {
       </li>
       <li className="nav-item">
         <a
-          href="#Nav"
+          href="/Nav"
           onClick={() => handlePageChange('Nav')}
           //  TODO: Add a comment explaining what this logic is doing
 
@@ -40,7 +41,7 @@ function NavTabs({ currentPage, handlePageChange }) {
       </li>
       <li className="nav-item">
         <a
-          href="#contact"
+          href="/Contact"
           //  TODO: Add a comment explaining what this logic is doing
 
           onClick={() => handlePageChange('Contact')}
