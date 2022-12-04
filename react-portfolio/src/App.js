@@ -1,3 +1,4 @@
+// First we import 'useState' with React hook method that are immediately available to components
 import React, { useState } from 'react';
 
 import './App.css';

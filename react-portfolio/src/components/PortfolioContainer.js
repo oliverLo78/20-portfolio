@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import NavTabs from './NavTabs';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Nav from './pages/Nav';
-import Portfolio from './pages/Portfolio';
+import About from './About/index';
+import Contact from './Contact/index';
+import Nav from './Nav/index';
+import Portfolio from './Portfolio/index';
 
 
 export default function PortfolioContainer() {

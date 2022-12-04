@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
   return (
     <div>
-      <h1>About Page</h1>
+      <h1>About Me</h1>
       <p>
         Ready to embark on the journey of Software Engineer. I enjoy creating Websites
         and software applications to improve the end user experience. Very excited
