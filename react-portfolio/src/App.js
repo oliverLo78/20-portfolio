@@ -1,16 +1,16 @@
 // First we import 'useState' with React hook method that are immediately available to components
 import React, { useState } from 'react';
-
 import './App.css';
-
-// import NavTabs from './components/NavTabs';
 
 // Importing components
 import Nav from './components/Nav';
+// import NavTabs from './components/NavTabs';
+
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -35,7 +35,9 @@ function App() {
       ) : (
         <About />
       )}
+       <Footer />
     </div>
+     
   );
 }
 
