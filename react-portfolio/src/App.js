@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 
 import './App.css';
+import NavTabs from './components/NavTabs';
 
 // Importing components
 import Nav from './components/Nav';
