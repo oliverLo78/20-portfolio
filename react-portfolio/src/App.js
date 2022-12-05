@@ -37,7 +37,7 @@ function App() {
       ) : (
         <About />
       )}
-       <Portfolio />
+      
        <Footer />
     </div>
      

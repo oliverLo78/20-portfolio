@@ -1,9 +1,7 @@
 import React from 'react';
 import './NavTabs.css';
 
-
 // TODO: Add a comment explaining how we are able to extract the key value pairs from props
-
 function NavTabs({ showProjects, showAbout, showResume, showContact, pageIndex }) {
   return (
     <ul className="nav nav-tabs">

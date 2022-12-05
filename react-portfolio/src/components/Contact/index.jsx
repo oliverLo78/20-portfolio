@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
-import './style.css';
-
 // Here we import a helper function that will check if the email is valid
-import { checkPassword, validateEmail } from '../../utils/helpers';
+import { checkMessage, validateEmail } from '../../utils/helpers';
 
 function Contact() {
   // Create state variables for the fields in the form
@@ -24,7 +22,7 @@ function Contact() {
       setName(inputValue);
     } else if (inputType === 'Email') {
       setEmail(inputValue);
-      if (inputType === 'message') {
+    }  else if (inputType === 'message') {
         setMessage(inputValue);
     } else {
       errorMessage('Message required...');
@@ -57,31 +55,37 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div class="col-md-6">
       <p>Hello {name}</p>
       <form className="form">
+        <label class="form-label">Name:</label>
+        <input
+          value={name}
+          name="name"
+          onChange={handleInputChange}
+          type="name"
+          class="form-control"
+          placeholder="name"
+        />
+         <label class="form-label">Email Address:</label>
         <input
           value={email}
           name="email"
           onChange={handleInputChange}
           type="email"
+          class="form-control"
           placeholder="email"
         />
-        <input
-          value={name}
-          name="name"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="name"
-        />
-        <input
+         <label class="form-label">Message:</label>
+        <textarea
           value={message}
           name="message"
           onChange={handleInputChange}
           type="message"
+          class="form-control"
           placeholder="Add a Message here"
         />
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
+        <button class="form-control" type="button" onClick={handleFormSubmit}>Submit</button>
       </form>
       {errorMessage && (
         <div>
@@ -90,6 +94,6 @@ function Contact() {
       )}
     </div>
   );
-}}
+}
 
 export default Contact;
