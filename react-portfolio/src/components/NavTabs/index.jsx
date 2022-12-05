@@ -9,7 +9,7 @@ function NavTabs({ showProjects, showAbout, showResume, showContact, pageIndex }
     <ul className="nav nav-tabs">
       <li className="nav-item">
         <h1 
-          onClick={() => showAbout}
+          onClick={showAbout}
 
           //*  TODO: BONUS: Add a comment explaining what kind of operator this is and what it is checking for
           className={pageIndex === 0 ? 'nav-link active' : 'nav-link'}
@@ -19,7 +19,7 @@ function NavTabs({ showProjects, showAbout, showResume, showContact, pageIndex }
       </li>
       <li className="nav-item">
         <h1
-          onClick={() => showProjects}
+          onClick={showProjects}
 
           //  TODO: Add a comment explaining what this logic is doing
           className={pageIndex === 1 ? 'nav-link active' : 'nav-link'}
@@ -29,7 +29,7 @@ function NavTabs({ showProjects, showAbout, showResume, showContact, pageIndex }
       </li>
       <li className="nav-item">
         <h1
-          onClick={() => showResume}
+          onClick={showResume}
           //  TODO: Add a comment explaining what this logic is doing
           className={pageIndex === 2 ? 'nav-link active' : 'nav-link'}
         >
@@ -40,7 +40,7 @@ function NavTabs({ showProjects, showAbout, showResume, showContact, pageIndex }
         <h1
           //  TODO: Add a comment explaining what this logic is doing
 
-          onClick={() => showContact}
+          onClick={showContact}
           className={pageIndex === 3 ? 'nav-link active' : 'nav-link'}
         >
           Contact

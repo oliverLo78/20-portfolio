@@ -1,9 +1,11 @@
 import React from 'react';
+import { FaUserTie } from 'react-icons/fa';
 
 const About = () => {
   return (
     <div>
       <h1>About Me</h1>
+      <FaUserTie  size="3em" color='' />
       <p>
         Ready to embark on the journey of Software Engineer. I enjoy creating Websites
         and software applications to improve the end user experience. Very excited
