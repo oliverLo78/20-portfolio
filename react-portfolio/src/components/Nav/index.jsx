@@ -1,12 +1,19 @@
 import React from 'react';
 
-
 const Nav = ({ showAbout, showProjects, showResume, showContact }) => {
-  return (
-    <div className="nav nav-tabs" style={{ display: 'flex', justifyContent: 'center', 
-      alignItems: 'center' }}>
+const linkStyle = { border: '1px black', padding: '5px'};
 
-    <div className='nav-item'>
+  return (
+    <div className="nav nav-tabs" 
+      style={{ 
+        display: 'flex',
+        fontFamily: 'helvetica',
+        flexDirection: 'row',
+        justifyContent: 'center', 
+        alignItems: 'center',
+      }}>
+      
+    <div className='nav-item' style={linkStyle}>
       <h1 onClick={{showAbout}}>About</h1>
       <h1 onClick={{showProjects}}>Projects</h1>
       <h1 onClick={{showResume}}>Resume</h1>

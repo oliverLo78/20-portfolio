@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 import './App.css';
 
-// Importing components
-import Nav from './components/Nav';
-// import NavTabs from './components/NavTabs';
+// Importing components from the components folder
+// import Nav from './components/Nav';
+import NavTabs from './components/NavTabs';
 
 import About from './components/About';
 import Portfolio from './components/Portfolio';
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <Nav
+      <NavTabs
         showAbout={() => setPageIndex(0)}
         showProjects={() => setPageIndex(1)}
         showResume={() => setPageIndex(2)}
@@ -35,6 +35,7 @@ function App() {
       ) : (
         <About />
       )}
+       <Portfolio />
        <Footer />
     </div>
      
