@@ -1,9 +1,10 @@
 import React from "react";
+import pdf from '../Resume/oliver-lopez-resume-2022.pdf.docx'
 
 function ResumeDiv() {
   return (
     <div>
-      <h1>Download my resume</h1>
+      <h1>Download my  <a href={pdf}>resume</a></h1>
       <h2>Front-end Proficiencies</h2>
       <ul>
         <li>HTML</li>
@@ -19,3 +20,4 @@ function ResumeDiv() {
 }
 
 export default ResumeDiv;
+export {pdf}

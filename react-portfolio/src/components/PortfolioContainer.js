@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import NavTabs from './NavTabs';
 import About from './About/index';
 import Contact from './Contact/index';
-import Nav from './Nav/index';
+import Resume from './Resume/index';
 import Portfolio from './Portfolio/index';
 
 
