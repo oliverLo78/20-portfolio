@@ -8,7 +8,7 @@ import './components/NavTabs/index';
 import NavTabs from './components/NavTabs';
 
 import About from './components/About';
-import Portfolio from './components/Portfolio';
+import Portfolio from './components/Portfolio/portfolio';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';

@@ -1,16 +1,19 @@
+import { requirePropFactory } from '@material-ui/core';
 import React from 'react';
+
 
  export default function Card(props) {
   const cardStyle = {
     width: '18rem',
   };
   console.log(props);
+
   return (
-    <div className='container'>
+    <div className='container' key={props.key}>
       <div className='card' style={cardStyle}>
       <img
           className="card-img-top"
-          src={'./public/Speakeasy-Screenshot.png'}
+          src={ require(props.imageUrl) }
           alt="Card cap"
         />
       <div className='card-body'>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 // import Contact from './components/utils';
 import emailjs from '@emailjs/browser';
 
@@ -12,7 +12,8 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-
+  const form = useRef();
+  
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const { target } = e;
@@ -48,30 +49,32 @@ function Contact() {
     //   );
     //   return;
     // }
-    export const ContactUs = () => {
-      const form = useRef();
     
-      const sendEmail = (e) => {
-        e.preventDefault();
-    emailjs.sendForm('service_yxf1m8j', 'template_92yyfem', form.current, 'RQhNo667QGSlWoBNi')
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
-    });
-
-    alert(`Hello ${name}`);
+      // export const ContactUs = () => {
+     
     
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setName('');
-    setEmail('');
-    setMessage('');
-  };
+  //     const sendEmail = (e) => {
+  //       e.preventDefault();
+  //   emailjs.sendForm('service_yxf1m8j', 'template_92yyfem', form.current, 'RQhNo667QGSlWoBNi')
+  //   .then((result) => {
+  //       console.log(result.text);
+  //   }, (error) => {
+  //       console.log(error.text);
+  //   });
 
+  //   alert(`Hello ${name}`);
+  
+  //   // If everything goes according to plan, we want to clear out the input after a successful registration.
+  //   setName('');
+  //   setEmail('');
+  //   setMessage('');
+  // };
+  }
+  
   return (
     <div class="col-md-6">
       <p>Hello {name}</p>
-      <form className="form" ref={form} onSubmit={sendEmail}>
+      <form className="form" ref={form} >
         <label class="form-label">Name:</label>
         <input
           value={name}
@@ -108,6 +111,7 @@ function Contact() {
       )}
     </div>
   );
-}
+
+  }
 
 export default Contact;
