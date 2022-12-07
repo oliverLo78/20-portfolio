@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+// import Contact from './components/utils';
+import emailjs from '@emailjs/browser';
 
 // Here we import a helper function that will check if the email is valid
 import { checkMessage, validateEmail } from '../../utils/helpers';
@@ -34,20 +36,32 @@ function Contact() {
     e.preventDefault();
 
     // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !name) {
-      setErrorMessage('Email or name is invalid');
+    // if (!validateEmail(email) || !name) {
+    //   setErrorMessage('Email or name is invalid');
       // We want to exit out of this code block if something is wrong so that the user can correct it
-      return;
+      // return;
       // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
-    }
-    if (!checkMessage(message)) {
-      setErrorMessage(
-        `Message required for your account: ${name}`
-      );
-      return;
-    }
-    alert(`Hello ${name}`);
+    // }
+    // if (!checkMessage(message)) {
+    //   setErrorMessage(
+    //     `Message required for your account: ${name}`
+    //   );
+    //   return;
+    // }
+    export const ContactUs = () => {
+      const form = useRef();
+    
+      const sendEmail = (e) => {
+        e.preventDefault();
+    emailjs.sendForm('service_yxf1m8j', 'template_92yyfem', form.current, 'RQhNo667QGSlWoBNi')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
 
+    alert(`Hello ${name}`);
+    
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setName('');
     setEmail('');
@@ -57,7 +71,7 @@ function Contact() {
   return (
     <div class="col-md-6">
       <p>Hello {name}</p>
-      <form className="form">
+      <form className="form" ref={form} onSubmit={sendEmail}>
         <label class="form-label">Name:</label>
         <input
           value={name}
