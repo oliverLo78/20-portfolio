@@ -5,8 +5,8 @@ const projects = [
   {
     name: 'Speakeasy',
     description: 'The place to get info about your favorite cocktails',
-    id: '123412asf4dga23512',
-    imageUrl: '../../../public/images/Speakeasy-Screenshot.png'
+    id: '1',
+    // imageUrl: './'
   },
   {
     name: 'Speakeasy',

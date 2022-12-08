@@ -62,9 +62,9 @@ function Contact() {
   //       console.log(error.text);
   //   });
 
-  //   alert(`Hello ${name}`);
+     alert(`Hello ${name}`);
   
-  //   // If everything goes according to plan, we want to clear out the input after a successful registration.
+  //  If everything goes according to plan, we want to clear out the input after a successful registration.
   //   setName('');
   //   setEmail('');
   //   setMessage('');

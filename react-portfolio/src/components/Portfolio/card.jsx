@@ -13,7 +13,7 @@ import React from 'react';
       <div className='card' style={cardStyle}>
       <img
           className="card-img-top"
-          src={ require(props.imageUrl) }
+          // src={ require(props.imageUrl) }
           alt="Card cap"
         />
       <div className='card-body'>
@@ -22,7 +22,7 @@ import React from 'react';
       <p className='card-text'>Description: {props.description}</p>
       <p className='card-text'>ID: {props.id}</p>
       <a href="/" className='btn btn-primary'>
-        Speakeasy {props.name}
+        {props.name}
       </a>
     </div>
   </div>

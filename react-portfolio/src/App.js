@@ -1,10 +1,9 @@
 // First we import 'useState' with React hook method that are immediately available to components
 import React, { useState } from 'react';
-import './App.css';
+import './styles/App.css';
 import './components/NavTabs/index';
 
 // Importing components from the components folder
- //import Nav from './components/Nav';
 import NavTabs from './components/NavTabs';
 
 import About from './components/About';

@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -38,7 +38,7 @@
 }
 
 /* css file found in GitHub */
-.navbar {
+.nav-items {
   width: 100%;
   height: 100px;
   background: #21325e;
@@ -53,29 +53,28 @@
   color: white;
 }
 
-.navbar a {
+.a {
   color: white;
   text-decoration: none;
   margin: 20px;
   font-size: 25px;
 }
 
-.toggleButton {
+.form-control {
   width: 100%;
-  height: 100px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-.toggleButton svg {
+.form-control {
   font-size: 50px;
 }
-.toggleButton button {
+.form-control {
   margin-right: 20px;
   background-color: transparent;
   border: none;
-  color: white;
+  color: rgb(29, 201, 167);
   cursor: pointer;
 }
 
