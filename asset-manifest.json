@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/20-portfolio/static/css/main.4480dc56.css",
+    "main.js": "/20-portfolio/static/js/main.bd4c7a00.js",
+    "static/media/oliver-lopez-resume-2022.pdf.docx": "/20-portfolio/static/media/oliver-lopez-resume-2022.pdf.2d850d6485917169425d.docx",
+    "index.html": "/20-portfolio/index.html",
+    "main.4480dc56.css.map": "/20-portfolio/static/css/main.4480dc56.css.map",
+    "main.bd4c7a00.js.map": "/20-portfolio/static/js/main.bd4c7a00.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4480dc56.css",
+    "static/js/main.bd4c7a00.js"
+  ]
+}
