@@ -152,7 +152,7 @@ return (
         Please feel free to reach out to me. I would be delighted to answer all your questions or concerns.
       </CardText>
       <LinkedInIcon onClick={() => window.open('https://www.linkedin.com/in/oliver-lopez78/')}/>
-      <EmailIcon />
+      <EmailIcon onClick={() => window.open('mailto:oliverberto@gmail.com')}/>
       <GithubIcon onClick={() => window.open('https://github.com/oliverLo78')}/>
       <TwitterIcon />
       <CardText>
