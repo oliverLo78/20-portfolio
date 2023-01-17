@@ -1,5 +1,6 @@
-import { requirePropFactory } from '@material-ui/core';
+// import { requirePropFactory } from '@material-ui/core';
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
  export default function Card(props) {

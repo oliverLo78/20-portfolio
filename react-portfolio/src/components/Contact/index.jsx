@@ -1,40 +1,40 @@
-import React, { useState, useRef } from 'react';
+// import React, { useState, useRef } from 'react';
 // import Contact from './components/utils';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 
 // Here we import a helper function that will check if the email is valid
-import { checkMessage, validateEmail } from '../../utils/helpers';
+// import { checkMessage, validateEmail } from '../../utils/helpers';
 
-function Contact() {
+// function Contact() {
   // Create state variables for the fields in the form
   // We are also setting their initial values to an empty string
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-  const form = useRef();
+  // const [name, setName] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [message, setMessage] = useState('');
+  // const [errorMessage, setErrorMessage] = useState('');
+  // const form = useRef();
   
-  const handleInputChange = (e) => {
+  // const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
+    // const { target } = e;
+    // const inputType = target.name;
+    // const inputValue = target.value;
 
     // Based on the input type, we set the state of either email, username, and password
-    if (inputType === 'name') {
-      setName(inputValue);
-    } else if (inputType === 'Email') {
-      setEmail(inputValue);
-    }  else if (inputType === 'message') {
-        setMessage(inputValue);
-    } else {
-      errorMessage('Message required...');
-    }
-  };
+  //   if (inputType === 'name') {
+  //     setName(inputValue);
+  //   } else if (inputType === 'Email') {
+  //     setEmail(inputValue);
+  //   }  else if (inputType === 'message') {
+  //       setMessage(inputValue);
+  //   } else {
+  //     errorMessage('Message required...');
+  //   }
+  // };
 
-  const handleFormSubmit = (e) => {
+  // const handleFormSubmit = (e) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
-    e.preventDefault();
+    // e.preventDefault();
 
     // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
     // if (!validateEmail(email) || !name) {
@@ -62,56 +62,107 @@ function Contact() {
   //       console.log(error.text);
   //   });
 
-     alert(`Hello ${name}`);
+    //  alert(`Hello ${name}`);
   
   //  If everything goes according to plan, we want to clear out the input after a successful registration.
   //   setName('');
   //   setEmail('');
   //   setMessage('');
   // };
-  }
+  // }
   
-  return (
-    <div class="col-md-6">
-      <p>Hello {name}</p>
-      <form className="form" ref={form} >
-        <label class="form-label">Name:</label>
-        <input
-          value={name}
-          name="name"
-          onChange={handleInputChange}
-          type="name"
-          class="form-control"
-          placeholder="name"
-        />
-         <label class="form-label">Email Address:</label>
-        <input
-          value={email}
-          name="email"
-          onChange={handleInputChange}
-          type="email"
-          class="form-control"
-          placeholder="email"
-        />
-         <label class="form-label">Message:</label>
-        <textarea
-          value={message}
-          name="message"
-          onChange={handleInputChange}
-          type="message"
-          class="form-control"
-          placeholder="Add a Message here"
-        />
-        <button class="form-control" type="button" onClick={handleFormSubmit}>Submit</button>
-      </form>
-      {errorMessage && (
-        <div>
-          <p className="error-text">{errorMessage}</p>
-        </div>
-      )}
-    </div>
-  );
+  // return (
+  //   <div class="col-md-6">
+  //     <p>Hello {name}</p>
+  //     <form className="form" ref={form} >
+  //       <label class="form-label">Name:</label>
+  //       <input
+  //         value={name}
+  //         name="name"
+  //         onChange={handleInputChange}
+  //         type="name"
+  //         class="form-control"
+  //         placeholder="name"
+  //       />
+  //        <label class="form-label">Email Address:</label>
+  //       <input
+  //         value={email}
+  //         name="email"
+  //         onChange={handleInputChange}
+  //         type="email"
+  //         class="form-control"
+  //         placeholder="email"
+  //       />
+  //        <label class="form-label">Message:</label>
+  //       <textarea
+  //         value={message}
+  //         name="message"
+  //         onChange={handleInputChange}
+  //         type="message"
+  //         class="form-control"
+  //         placeholder="Add a Message here"
+  //       />
+  //       <button class="form-control" type="button" onClick={handleFormSubmit}>Submit</button>
+  //     </form>
+  //     {errorMessage && (
+  //       <div>
+  //         <p className="error-text">{errorMessage}</p>
+  //       </div>
+  //     )}
+  //   </div>
+  // );
 
-  }
+  // }
 
-export default Contact;
+/******************************************************************************************************************************* */
+import React from 'react';
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GithubIcon from '@material-ui/icons/GitHub';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import EmailIcon from '@material-ui/icons/Email';
+
+// React
+import { 
+  Card,
+  CardImg,
+  CardImgOverlay,
+  CardTitle,
+  CardText
+ } from 'reactstrap';
+
+export default function Contact() {
+return (
+<div>
+  <Card inverse>
+    <CardImg
+      alt="Card image cap"
+      src="https://picsum.photos/900/270?scale"
+      style={{
+        height: 270
+      }}
+      width="100%"
+     
+    />
+    <CardImgOverlay>
+      <CardTitle tag="h5">
+      Have a question?
+      </CardTitle>
+      <CardText>
+        Let's get to know each other. How can I be useful to your service?
+        Please feel free to reach out to me. I would be delighted to answer all your questions or concerns.
+      </CardText>
+      <LinkedInIcon />
+      <EmailIcon />
+      <GithubIcon />
+      <TwitterIcon />
+      <CardText>
+        <small className="text-muted">
+          Last updated 3 mins ago
+        </small>
+      </CardText>
+    </CardImgOverlay>
+  </Card>
+</div>
+);
+    }
+

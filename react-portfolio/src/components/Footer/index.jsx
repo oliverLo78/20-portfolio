@@ -1,11 +1,14 @@
 import React from 'react';
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GithubIcon from '@material-ui/icons/GitHub';
-import TwitterIcon from '@material-ui/icons/Twitter'
+import TwitterIcon from '@material-ui/icons/Twitter';
 
 const styles = {
   sectionStyles: {
-    background: 'yellow',
+    background: '#21215e',
+    color: 'white',
+    width: '100%',
+    height: '100px',
   },
 };
 
