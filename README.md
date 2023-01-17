@@ -22,51 +22,75 @@ SO THAT I can assess whether they're a good candidate for an open position
 
 GIVEN a single-page application portfolio for a web developer
 
+
 WHEN I load the portfolio
+
 
 THEN I am presented with a page containing a header, a section for content, and a footer
 
+
 WHEN I view the header
+
 
 THEN I am presented with the developer's name and navigation with titles corresponding to different sections of the portfolio
 
+
 WHEN I view the navigation titles
+
 
 THEN I am presented with the titles About Me, Portfolio, Contact, and Resume, and the title corresponding to the current section is highlighted
 
+
 WHEN I click on a navigation title
+
 
 THEN I am presented with the corresponding section below the navigation without the page reloading and that title is highlighted
 
+
 WHEN I load the portfolio the first time
+
 
 THEN the About Me title and section are selected by default
 
+
 WHEN I am presented with the About Me section
+
 
 THEN I see a recent photo or avatar of the developer and a short bio about them
 
+
 WHEN I am presented with the Portfolio section
+
 
 THEN I see titled images of six of the developer’s applications with links to both the deployed applications and the corresponding GitHub repositories
 
+
 WHEN I am presented with the Contact section
+
 
 THEN I see a contact form with fields for a name, an email address, and a message
 
+
 WHEN I move my cursor out of one of the form fields without entering text
+
 
 THEN I receive a notification that this field is required
 
+
 WHEN I enter text into the email address field
+
 
 THEN I receive a notification if I have entered an invalid email address
 
+
 WHEN I am presented with the Resume section
+
 
 THEN I see a link to a downloadable resume and a list of the developer’s proficiencies
 
+
 WHEN I view the footer
+
 
 THEN I am presented with text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter)
 
@@ -79,6 +103,7 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 [![JavaScript Shield](https://img.shields.io/badge/JavaScript-F7DF1E?&style=for-the-badge&logo=javascript&logoColor=272727)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## Table of Contents
+
 - [Installation](#installation)
 - [Contributing](#contributing)
 - [Tests](#insomnia)
@@ -86,13 +111,19 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 - [Contact](#contact)
 - [Acknowledgments](#acknowledgments)
 
-## Installation
+## Link to Portfolio
 
-
+https://oliverlo78.github.io/20-portfolio/
 
 ## Screenshot
 
+![Screenshot_20221208_095551](https://user-images.githubusercontent.com/109435666/210085971-333a2405-49b0-4615-8825-b233adfc7b33.png)
 
+![Screenshot_20221208_095613](https://user-images.githubusercontent.com/109435666/210086000-3d56aed3-5e53-47eb-bac9-156ce706e5cd.png)
+
+![Screenshot_20221208_095637](https://user-images.githubusercontent.com/109435666/210086012-ade17114-a1fb-4f3c-8b9d-d53f92ad49d0.png)
+
+![Screenshot_20221208_095700](https://user-images.githubusercontent.com/109435666/210086045-e70eb8a2-ee26-4fc1-8d26-5d040b26d73c.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,5 +162,6 @@ Distributed under the MIT License. See [LICENSE](./LICENSE) for more information
 For any further questions feel free to contact me via:
 - GitHub: [GitHub oliverLo78](https://github.com/oliverLo78)
 - Email: [oliverberto@gmail.com](mailto:oliverberto@gmail.com)
-- LinkedIn: [Name on LinkedIn](https://www.linkedin.com/in/oliver-lopez78/)
+- LinkedIn: [Oliver Lopez](https://www.linkedin.com/in/oliver-lopez78/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
