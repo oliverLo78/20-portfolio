@@ -151,9 +151,9 @@ return (
         Let's get to know each other. How can I be useful to your service?
         Please feel free to reach out to me. I would be delighted to answer all your questions or concerns.
       </CardText>
-      <LinkedInIcon />
+      <LinkedInIcon onClick={() => window.open('https://www.linkedin.com/in/oliver-lopez78/')}/>
       <EmailIcon />
-      <GithubIcon />
+      <GithubIcon onClick={() => window.open('https://github.com/oliverLo78')}/>
       <TwitterIcon />
       <CardText>
         <small className="text-muted">
