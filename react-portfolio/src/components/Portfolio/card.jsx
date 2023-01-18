@@ -5,7 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
  export default function Card(props) {
   const cardStyle = {
-    width: '18rem',
+    width: '36rem',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column'
   };
   console.log(props);
 
@@ -14,7 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
       <div className='card' style={cardStyle}>
       <img
           className="card-img-top"
-          // src={ require(props.imageUrl) }
+          //src={ require(props.imageUrl) }
           alt="Card cap"
         />
       <div className='card-body'>

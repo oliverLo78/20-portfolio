@@ -5,7 +5,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 
 const styles = {
   sectionStyles: {
-    background: '#21215e',
+    background: '#5757c5',
     color: 'white',
     width: '100%',
     height: '100px',

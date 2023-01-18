@@ -1,10 +1,18 @@
 import React from 'react';
+import Avatar from '@mui/material/Avatar';
+
 import './NavTabs.css';
 
 // TODO: Add a comment explaining how we are able to extract the key value pairs from props
 function NavTabs({ showProjects, showAbout, showResume, showContact, pageIndex }) {
   return (
     <ul className="nav nav-tabs">
+      <Avatar
+        alt="Oliver Lopez"
+        src="/public/images/oLprofile.jpg"
+        sx={{ width: 56, height: 56 }}
+      />
+      <h1 className=''>Oliver Lopez</h1>
       <li className="nav-item">
         <h1 
           onClick={showAbout}

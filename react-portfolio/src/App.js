@@ -5,7 +5,6 @@ import './components/NavTabs/index';
 
 // Importing components from the components folder
 import NavTabs from './components/NavTabs';
-
 import About from './components/About';
 import Portfolio from './components/Portfolio/portfolio';
 import Resume from './components/Resume';
