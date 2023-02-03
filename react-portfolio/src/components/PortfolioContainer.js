@@ -5,6 +5,7 @@ import About from './About/index';
 import Contact from './Contact/index';
 import Resume from './Resume/index';
 import Portfolio from './Portfolio';
+import Skills from './Skills';
 
 
 export default function PortfolioContainer() {
@@ -20,6 +21,9 @@ export default function PortfolioContainer() {
     }
     if (currentPage === 'Resume') {
       return <Resume />;
+    }
+    if (currentPage === 'Skills') {
+      return <Skills />;
     }
     return <Contact />;
   };

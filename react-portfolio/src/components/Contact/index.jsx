@@ -140,7 +140,7 @@ return (
       style={{
         height: 270
       }}
-      width="100%"
+      width="25%"
      
     />
     <CardImgOverlay>
@@ -155,11 +155,6 @@ return (
       <EmailIcon onClick={() => window.open('mailto:oliverberto@gmail.com')}/>
       <GithubIcon onClick={() => window.open('https://github.com/oliverLo78')}/>
       <TwitterIcon />
-      <CardText>
-        <small className="text-muted">
-          Last updated 3 mins ago
-        </small>
-      </CardText>
     </CardImgOverlay>
   </Card>
 </div>
