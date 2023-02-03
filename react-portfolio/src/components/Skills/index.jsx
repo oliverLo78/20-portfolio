@@ -15,15 +15,42 @@ return (
         <ol className='skills-list'>
           <li className='soft-skills'>
             <h2>Front-End Developer</h2>
-            <span></span>
+                <span>
+                    HTML.
+                    CSS.
+                    JavaScript.
+                    DOM Manipulation.
+                    JSON.
+                    AJAX.
+                    Node.js.
+                    MySQL.
+                </span>
           </li>
           <li className='soft-skills'>
             <h2>Back-End Developer</h2>
-            <span> </span>
+                <span>
+                    Python.
+                    Java.
+                    PHP.
+                    SQL.
+                    Git.
+                    HTML.
+                    CSS.
+                    JavaScript.
+                </span>
           </li>
           <li className='soft-skills'>
             <h2>Coding Languages</h2>
-            <span></span>
+                <span>
+                    Data structures and algorithms.
+                    Database and SQL.
+                    Object-oriented programming (OOP) languages.
+                    Integrated development environments (IDEs)
+                    Cloud computing.
+                    Web development.
+                    Containers.
+                    Text editors.
+                </span>
           </li>
         </ol>
       </div>

@@ -138,9 +138,9 @@ return (
       alt="Card image cap"
       src="https://source.unsplash.com/random"
       style={{
-        height: 270
+        height: 750
       }}
-      width="25%"
+      width="50%"
      
     />
     <CardImgOverlay>

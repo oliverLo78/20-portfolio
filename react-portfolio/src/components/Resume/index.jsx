@@ -1,11 +1,18 @@
 import React from "react";
-import pdf from '../Resume/oliver-lopez-resume-2022.pdf.docx'
+import { Toast, ToastHeader, ToastBody } from "reactstrap";
+import pdf from '../Resume/Oliver FullStack Resume 2023.pdf';
 
 function ResumeDiv(props) {
   return (
-    <div>
-      <h1>Hello, {props.name}</h1>
-      <h1>Download my  <a href={pdf}>resume</a></h1>
+    <div className="p-3 bg-info my-2 rounded">
+      <Toast>
+        <ToastHeader>
+          Reactstrap awesomesauce {props.name}
+        </ToastHeader>
+        <ToastBody>
+          Download my <a href={pdf}>resume</a>
+        </ToastBody>
+      </Toast>
     </div>
   );
 }
