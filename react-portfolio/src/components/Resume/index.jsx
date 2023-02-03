@@ -6,7 +6,7 @@ function ResumeDiv(props) {
   return (
     <div className="p-3 bg-info my-2 rounded">
       <Toast>
-        <ToastHeader>
+        <ToastHeader icon="info">
           Reactstrap awesomesauce {props.name}
         </ToastHeader>
         <ToastBody>
