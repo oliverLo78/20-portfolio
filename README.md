@@ -117,13 +117,10 @@ https://oliverlo78.github.io/20-portfolio/
 
 ## Screenshot
 
-![Screenshot_20221208_095551](https://user-images.githubusercontent.com/109435666/210085971-333a2405-49b0-4615-8825-b233adfc7b33.png)
-
-![Screenshot_20221208_095613](https://user-images.githubusercontent.com/109435666/210086000-3d56aed3-5e53-47eb-bac9-156ce706e5cd.png)
-
-![Screenshot_20221208_095637](https://user-images.githubusercontent.com/109435666/210086012-ade17114-a1fb-4f3c-8b9d-d53f92ad49d0.png)
-
-![Screenshot_20221208_095700](https://user-images.githubusercontent.com/109435666/210086045-e70eb8a2-ee26-4fc1-8d26-5d040b26d73c.png)
+![Screenshot_20230208_032438](https://user-images.githubusercontent.com/109435666/217643731-96ba1395-28ba-419f-b08b-4b805d888c90.png)
+![Screenshot_20230208_032550](https://user-images.githubusercontent.com/109435666/217643880-5e81d133-ed26-45a4-8889-fe2baf16f886.png)
+![Screenshot_20230208_032609](https://user-images.githubusercontent.com/109435666/217643898-bf695472-0750-4554-a158-7514a864cd37.png)
+![Screenshot_20230208_032625](https://user-images.githubusercontent.com/109435666/217643929-0257702e-8f29-4c9a-930c-1c1d9c934934.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
