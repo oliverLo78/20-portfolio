@@ -41,7 +41,7 @@ export default function RecipeReviewCard() {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+            S
           </Avatar>
         }
         action={
@@ -55,7 +55,7 @@ export default function RecipeReviewCard() {
       <CardMedia
           component="img"
           height="194"
-          image="/public/images/Speakeasy-Screenshot.png"
+          image="/public/images/paella.jpg"
           alt="Speakeasy-Screenshot"
       />
       <CardContent>
@@ -81,11 +81,10 @@ export default function RecipeReviewCard() {
           <ExpandMoreIcon />
         </ExpandMore>
       </CardActions>
-
       {/*card content can expand. (Click the downward chevron to view the recipe.)*/}
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method:</Typography>
+          <Typography paragraph>Technologies:</Typography>
           <Typography paragraph>
             Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
             aside for 10 minutes.
