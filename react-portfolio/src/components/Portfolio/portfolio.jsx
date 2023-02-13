@@ -5,8 +5,7 @@ const projects = [
   {
     name: 'Speakeasy',
     description: 'The place to get info about your favorite cocktails',
-    id: '1',
-    imageUrl: ''
+    imageUrl: '/public/images/Speakeasy-Screenshot.png'
   },
   {
     name: 'Speakeasy',
@@ -27,7 +26,6 @@ export default function Display() {
         key={i}
         name={project.name} 
         description={project.description} 
-        id={project.id} 
         imageUrl={project.imageUrl}
         />)}
     </div>

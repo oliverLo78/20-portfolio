@@ -140,8 +140,7 @@ return (
       style={{
         height: 750
       }}
-      width="50%"
-     
+      width="100%"
     />
     <CardImgOverlay>
       <CardTitle tag="h5">
@@ -161,3 +160,5 @@ return (
 );
     }
 
+
+    
