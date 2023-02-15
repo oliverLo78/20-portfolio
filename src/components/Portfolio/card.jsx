@@ -40,7 +40,9 @@ export default function RecipeReviewCard() {
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar 
+          sx={{ bgcolor: red[500] }} 
+          aria-label="recipe">
             S
           </Avatar>
         }
@@ -55,7 +57,7 @@ export default function RecipeReviewCard() {
       <CardMedia
           component="img"
           height="194"
-          image="/public/images/paella.jpg"
+          image="./images/paella.jpg"
           alt="Speakeasy-Screenshot"
       />
       <CardContent>
