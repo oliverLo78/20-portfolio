@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './styles/App.css';
 import './components/NavTabs/index';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import grpProjects from './group-projects';
 
 // Importing components from the components folder
 import NavTabs from './components/NavTabs';

@@ -2,7 +2,7 @@
 import speakeasy from './images/Speakeasy-Screenshot.png';
 
 
-const GroupProjects = [
+const grpProjects = [
     {
         id: 1,
         title: 'SpeakEasy',
@@ -34,3 +34,5 @@ const GroupProjects = [
         technologies: 'HTML5, CSS3, JavaScript, jQuery, Bulma'
     },
 ]
+
+export default grpProjects;
