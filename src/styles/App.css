@@ -5,6 +5,16 @@
   color: 000;
   font-family: 'Titillium Web', sans-serif;
 }
+.p-three {
+  background-image: url('../images/ATL\ aquarium2.jpg');
+  background-size: cover;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: 600;
+  letter-spacing: .08rem;
+}
 
 .App-header {
   background-color: #282c34;
