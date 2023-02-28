@@ -1,0 +1,33 @@
+.footer-container {
+    display: flex;
+    background: linear-gradient(0.25turn, rgba(255, 147, 152, 0.5), rgba(253, 200, 201, 0.5));
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    flex-wrap: wrap;
+}
+
+.footer-li {
+    list-style-type: none; 
+    padding-right: 30px;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 44px;
+}
+
+.hide {
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+    .hide {
+        display: none;
+    }
+}

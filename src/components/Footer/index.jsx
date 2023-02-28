@@ -1,27 +1,28 @@
 import React from 'react';
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import GithubIcon from '@material-ui/icons/GitHub';
-import TwitterIcon from '@material-ui/icons/Twitter';
-
-const styles = {
-  sectionStyles: {
-    background: '#5757c5',
-    color: 'white',
-    width: '100%',
-    height: '100px',
-  },
-};
+import './footer.css'
 
 const Footer = () => {
   return ( 
-    <div className='footer' style={styles.sectionStyles}>
-        <div>
-            {" "}
-            <LinkedInIcon />{" "}
-            <GithubIcon />{" "}
-            <TwitterIcon />{" "}
-        </div>
-        <p> &copy; Oliver Lopez portfolio 2022 </p>
+    <div className='footer-container'>
+        <ul className='footer-ul'>
+          <li className='footer-li'><a href='https://twitter.com' target='_blank' rel='noreferrer'>
+            <i className='fa-brands fa-twitter'></i></a>
+          </li>
+          <li className='footer-li'><a href='https://github.com' target='_blank' rel='noreferrer'>
+            <i className='fa-brands fa-github'></i>
+          </a></li>
+          <li className='footer-li'><a href='https://linkedin.com' target='_blank' rel='noreferrer'>
+            <i className='fa-brands fa-linkedin'></i>
+          </a></li>
+          <li style={{display: 'flex', alignItems: 'center', cursor: 'auto'}} className='footer-li'>
+            <a href= "mailto: 'oliverberto@gmail.com'" target='_blank' rel='noreferrer'>
+              <i className='fa-solid fa-envelope'></i>
+            </a>
+            <span className='hide' style={{ cursor: 'auto', fontSize: '20px', textDecoration: 'none', color: '#000', paddingLeft: '10px'}}>
+              oliverberto@gmail.com
+            </span>
+          </li>
+        </ul>
     </div>
   );
 }
