@@ -18,35 +18,45 @@ function App() {
 
   const [ pageIndex, setPageIndex ] = useState(0);
 
+  const NavTabs = () => {
+      if ( pageIndex === 0 ) {
+        return<About />
+      }
 
-  return (
-    <div className="App">
-      <NavTabs
-        showAbout={() => setPageIndex(0)}
-        showSkills={() => setPageIndex(1)}
-        showProjects={() => setPageIndex(2)}
-        showResume={() => setPageIndex(3)}
-        showContact={() => setPageIndex(4)}
-        pageIndex = {pageIndex}
-      />
-        { pageIndex === 0 ? (
-        <About />
-      ) : pageIndex === 1 ? (
-        <Skills />
-      ) : pageIndex === 2 ? (
-        <Portfolio />
-      ) : pageIndex === 3 ? (
-        <Resume />
-      ) : pageIndex === 4 ? (
-        <Contact />
-      ) : (
-        <About />
-      ) }
+      if ( pageIndex === 1 ) {
+      return<Portfolio grpProjects={grpProjects}/>
+       }
+
+       if ( pageIndex === 2 ) {
+      return<Contact />
+      }
+    }
+
+  const tripPics = () => {
+
+      if ( pageIndex === 0 ) {
+      return'p-three'
+      } 
       
-       <Footer />
-    </div>
-     
-  );
+      if ( pageIndex === 1 ) {
+      return'p-two'
+      }
+      
+      if ( pageIndex === 2 ) {
+        return'p-one'
+      }  
+    }      
+      return (
+        <div className={tripPics()} style={{height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+          <Header
+            showAbout={() => setPageIndex(0)}
+            showProjects={() => setPageIndex(1)}
+            showContact={() => setPageIndex(2)}
+          />
+          {NavTabs()}
+          <Footer />
+          </div>
+      )
 }
 
 export default App;
