@@ -115,50 +115,50 @@
   // }
 
 /******************************************************************************************************************************* */
-import React from 'react';
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import GithubIcon from '@material-ui/icons/GitHub';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import EmailIcon from '@material-ui/icons/Email';
+// import React from 'react';
+// import LinkedInIcon from "@material-ui/icons/LinkedIn";
+// import GithubIcon from '@material-ui/icons/GitHub';
+// import TwitterIcon from '@material-ui/icons/Twitter';
+// import EmailIcon from '@material-ui/icons/Email';
 
-// React
-import { 
-  Card,
-  CardImg,
-  CardImgOverlay,
-  CardTitle,
-  CardText
- } from 'reactstrap';
+// // React
+// import { 
+//   Card,
+//   CardImg,
+//   CardImgOverlay,
+//   CardTitle,
+//   CardText
+//  } from 'reactstrap';
 
-export default function Contact() {
-return (
-<div>
-  <Card inverse>
-    <CardImg
-      alt="Card image cap"
-      src="https://source.unsplash.com/random"
-      style={{
-        height: 750
-      }}
-      width="100%"
-    />
-    <CardImgOverlay>
-      <CardTitle tag="h5">
-      Have a question?
-      </CardTitle>
-      <CardText>
-        Let's get to know each other. How can I be useful to your service?
-        Please feel free to reach out to me. I would be delighted to answer all your questions or concerns.
-      </CardText>
-      <LinkedInIcon onClick={() => window.open('https://www.linkedin.com/in/oliver-lopez78/')}/>
-      <EmailIcon onClick={() => window.open('mailto:oliverberto@gmail.com')}/>
-      <GithubIcon onClick={() => window.open('https://github.com/oliverLo78')}/>
-      <TwitterIcon />
-    </CardImgOverlay>
-  </Card>
-</div>
-);
-    }
+// export default function Contact() {
+// return (
+// <div>
+//   <Card inverse>
+//     <CardImg
+//       alt="Card image cap"
+//       src="https://source.unsplash.com/random"
+//       style={{
+//         height: 750
+//       }}
+//       width="100%"
+//     />
+//     <CardImgOverlay>
+//       <CardTitle tag="h5">
+//       Have a question?
+//       </CardTitle>
+//       <CardText>
+//         Let's get to know each other. How can I be useful to your service?
+//         Please feel free to reach out to me. I would be delighted to answer all your questions or concerns.
+//       </CardText>
+//       <LinkedInIcon onClick={() => window.open('https://www.linkedin.com/in/oliver-lopez78/')}/>
+//       <EmailIcon onClick={() => window.open('mailto:oliverberto@gmail.com')}/>
+//       <GithubIcon onClick={() => window.open('https://github.com/oliverLo78')}/>
+//       <TwitterIcon />
+//     </CardImgOverlay>
+//   </Card>
+// </div>
+// );
+//     }
 
 
     

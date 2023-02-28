@@ -3,14 +3,14 @@ import './header.css'
 
 const Header = ({ showAbout, showProjects, showContact }) => {
 
-    const [mobileOpen, setMobileOpen] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false)
 
-    const handleToggle = () => {
-        setMobileOpen(prev => !prev)
+    const handleMenu = () => {
+        setMenuOpen(prev => !prev)
       }
       
       const closeMenu = () => {
-        setMobileOpen(false)
+        setMenuOpen(false)
       }
 
     return (
@@ -26,8 +26,8 @@ const Header = ({ showAbout, showProjects, showContact }) => {
             </ul>
 
             <nav className="navBar">
-                <button onClick={handleToggle}>{mobileOpen ? <i className="fa-solid fa-x header-icons" style={{color: '#000'}}></i> : <i className="fa-solid fa-bars header-icons"></i>}</button>
-                <ul className={`menuNav ${mobileOpen ? " showMenu" : ""}`}>
+                <button onClick={handleMenu}>{menuOpen ? <i className="fa-solid fa-x header-icons" style={{color: '#000'}}></i> : <i className="fa-solid fa-bars header-icons"></i>}</button>
+                <ul className={`menuNav ${menuOpen ? " showMenu" : ""}`}>
                     <li className="header-ul-li menustyles" onClick={() => {showAbout(); closeMenu()}}>About</li>
                     <li className="header-ul-li menustyles" onClick={() => {showProjects(); closeMenu()}}>Projects</li>
                     <li className="header-ul-li menustyles" onClick={() => {showContact(); closeMenu()}}>Contact Me</li>

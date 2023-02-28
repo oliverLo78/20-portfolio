@@ -1,17 +1,20 @@
 // First we import 'useState' with React hook method that are immediately available to components
 import React, { useState } from 'react';
+
 import './styles/App.css';
-import './components/NavTabs/index';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import grpProjects from './group-projects';
 
+// import './components/NavTabs/index';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 // Importing components from the components folder
-import NavTabs from './components/NavTabs';
+import Header from './components/Header';
 import About from './components/About';
-import Portfolio from './components/Portfolio/portfolio';
-import Resume from './components/Resume';
+import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Resume from './components/Resume';
 import Skills from './components/Skills';
 
 function App() {
@@ -35,15 +38,15 @@ function App() {
   const tripPics = () => {
 
       if ( pageIndex === 0 ) {
-      return'p-three'
+      return'prj-one'
       } 
       
       if ( pageIndex === 1 ) {
-      return'p-two'
+      return'prj-two'
       }
       
       if ( pageIndex === 2 ) {
-        return'p-one'
+        return'prj-three'
       }  
     }      
       return (
