@@ -21,6 +21,11 @@
   background-size: cover;
 }
 
+.prj-four {
+  background-image: url('../images/Trip\ SanFrancisco2.jpg');
+  background-size: cover;
+}
+
 p {
   font-family: sans-serif;
   font-weight: 600;
@@ -38,9 +43,6 @@ p {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 /* css file found in GitHub */
 p {

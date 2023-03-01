@@ -1,8 +1,7 @@
 import React from "react";
 import { Toast, ToastHeader, ToastBody, Alert } from "reactstrap";
-import pdf from '../../images/Oliver FullStack Resume 2023.pdf';
 
-function ResumeDiv(props) {
+function SkillsDiv(props) {
   return (
     <div className="p-3 bg-info my-2 rounded">
       <Toast>
@@ -10,7 +9,7 @@ function ResumeDiv(props) {
           Reactstrap awesomesauce {props.name}
         </ToastHeader>
         <ToastBody>
-          Download my <a href={pdf}>resume</a>
+          Skills gained at UCF coding Bootcamp
         </ToastBody>
       </Toast>
       <Alert color="primary">
@@ -47,5 +46,4 @@ function ResumeDiv(props) {
 
 }
 
-export default ResumeDiv;
-export {pdf}
+export default SkillsDiv;

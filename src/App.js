@@ -14,7 +14,6 @@ import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Resume from './components/Resume';
 import Skills from './components/Skills';
 
 function App() {
@@ -23,14 +22,18 @@ function App() {
 
   const NavTabs = () => {
       if ( pageIndex === 0 ) {
-        return<About />
+      return<About />
       }
 
       if ( pageIndex === 1 ) {
       return<Portfolio grpProjects={grpProjects}/>
-       }
+      }
 
-       if ( pageIndex === 2 ) {
+      if ( pageIndex === 2 ) {
+      return<Skills />
+      }
+
+      if ( pageIndex === 3 ) {
       return<Contact />
       }
     }
@@ -48,13 +51,18 @@ function App() {
       if ( pageIndex === 2 ) {
         return'prj-three'
       }  
+
+      if ( pageIndex === 3 ) {
+        return'prj-four'
+      }  
     }      
       return (
         <div className={tripPics()} style={{height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Header
             showAbout={() => setPageIndex(0)}
             showProjects={() => setPageIndex(1)}
-            showContact={() => setPageIndex(2)}
+            showSkills={() => setPageIndex(2)}
+            showContact={() => setPageIndex(3)}
           />
           {NavTabs()}
           <Footer />

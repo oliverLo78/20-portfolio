@@ -1,5 +1,7 @@
 // React
 import React, { useState } from 'react';
+import './skills.css';
+
 import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
 
 function Skills(args) {
@@ -9,8 +11,8 @@ const [modal, setModal] = useState(false);
 const toggle = () => setModal(!modal);
 
 return (
-    <div>
-        <div className='skills'>
+    <div className='skills-container'>
+        <div className='right-side'>
         <h1>Skills</h1>
         <ol className='skills-list'>
           <li className='soft-skills'>

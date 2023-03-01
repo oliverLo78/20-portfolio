@@ -8,7 +8,7 @@
 }
 
 .title-map {
-    background-color: rgba(189, 53, 11, 0.4);
+    background-color: rgba(68, 17, 100, 0.4);
     margin-bottom: 3%;
     padding-bottom: 2%;
     box-shadow: 5px 10px 20px #000;
@@ -30,7 +30,7 @@
     border-color: #000 !important;
     position: relative;
     /* overflow: hidden; */
-    animation: fadeInUp 1s ease-in-out;
+    animation: scaleIn 0.5s ease-in-out;
     display: flex;
 }
 
@@ -83,7 +83,7 @@
     padding: 5px;
     margin-top: 10px;
     text-decoration: none;
-    animation: fadeInUp 1s ease-in-out;
+    animation: scaleIn 1.5s ease-in-out;
 }
 
 .fade-in-animation:hover {
@@ -101,12 +101,14 @@
     100% {transform: rotateY(360deg);}
 }
 
-@keyframes fadeInUp {
+@keyframes scaleIn {
     0% {
-    transform: translateY(500px)
+    transform: translateY(500px);
+    opacity: 0;
     }
     100% {
-    transform: translateY(0)
+    transform: translateY(0);
+    opacity: 1;
     }
 }
 

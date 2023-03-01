@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './header.css'
 
-const Header = ({ showAbout, showProjects, showContact }) => {
+const Header = ({ showAbout, showProjects, showSkills, showContact }) => {
 
     const [menuOpen, setMenuOpen] = useState(false)
 
@@ -22,6 +22,7 @@ const Header = ({ showAbout, showProjects, showContact }) => {
             <ul className="header-ul">
                 <li className="header-ul-li" onClick={showAbout}>About</li>
                 <li className="header-ul-li" onClick={showProjects}>Projects</li>
+                <li className="header-ul-li" onClick={showSkills}>Skills</li>
                 <li className="header-ul-li" onClick={showContact}>Contact Me</li>
             </ul>
 
@@ -30,6 +31,7 @@ const Header = ({ showAbout, showProjects, showContact }) => {
                 <ul className={`menuNav ${menuOpen ? " showMenu" : ""}`}>
                     <li className="header-ul-li menustyles" onClick={() => {showAbout(); closeMenu()}}>About</li>
                     <li className="header-ul-li menustyles" onClick={() => {showProjects(); closeMenu()}}>Projects</li>
+                     <li className="header-ul-li menustyles" onClick={() => {showSkills(); closeMenu()}}>Skills</li>
                     <li className="header-ul-li menustyles" onClick={() => {showContact(); closeMenu()}}>Contact Me</li>
                 </ul>
             </nav>
