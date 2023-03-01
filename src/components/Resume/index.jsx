@@ -1,6 +1,6 @@
 import React from "react";
 import { Toast, ToastHeader, ToastBody, Alert } from "reactstrap";
-import pdf from '/public/assets/Oliver FullStack Resume 2023.pdf';
+import pdf from '../../images/Oliver FullStack Resume 2023.pdf';
 
 function ResumeDiv(props) {
   return (

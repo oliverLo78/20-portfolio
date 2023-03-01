@@ -1,5 +1,5 @@
 .header-background {
-    background: linear-gradient(0.25turn, rgba(255, 147, 152, 0.5), rgba(253, 200, 201, 0.5));
+    background: linear-gradient(0.25turn, rgba(172, 218, 55, 0.5), rgba(112, 240, 206, 0.5));
 }
 
 .name-header {
@@ -8,7 +8,7 @@
 }
 
 .name-header::after {
-    content: 'dcrowdev';
+    content: 'oliverLo78';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -41,11 +41,11 @@
 }
 
 .first-name::after {
-    content: 'Dylan';
+    content: 'Oliver';
 }
 
 .last-name::after {
-    content: 'Crowley';
+    content: 'Lopez';
 }
 
 .title {
@@ -80,7 +80,7 @@
 }
 
 .header-ul-li:hover {
-    color: #FF9398;
+    color: #93f2ff;
     text-decoration: none;
 }
 

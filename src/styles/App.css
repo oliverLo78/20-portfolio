@@ -3,11 +3,11 @@
   margin: 0;
   padding: 0;
   color: 000;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .prj-one {
-  background-image: url('../images/ATL\ aquarium2.jpg');
+  background-image: url('../images/Trip\ SanFrancisco2.jpg');
   background-size: cover;
 }
 
@@ -41,7 +41,6 @@ p {
 .App-link {
   color: #61dafb;
 }
-
 
 /* css file found in GitHub */
 p {

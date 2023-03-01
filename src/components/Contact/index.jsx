@@ -51,7 +51,7 @@ import  Modal from 'react-bootstrap/Modal';
       </div>
     </form>
     
-    <Modal email={show} onHide={messageClose}>
+    <Modal email={email} onHide={messageClose}>
       <Modal.Header closeButton style={{ backgroundColor: '#cbfff5', borderRadius: '5px' }}>
           <Modal.Title>Message Sent!</Modal.Title>
       </Modal.Header>

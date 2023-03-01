@@ -17,7 +17,7 @@
     justify-content: center;
     width: 50%;
     animation: fadeInLeft 1s ease-in-out;
-    background-color: rgba(255, 147, 152, .4);
+    background-color:rgba(112, 240, 206, 0.5);
     margin-right: 30px;
     box-shadow: 5px 10px 20px #000;
 }
@@ -27,7 +27,7 @@
     width: 300px; 
     border: 2px solid #000;
     animation: fadeInLeft 2s ease-in-out;
-    box-shadow: 7px 7px 20px 1px #FF9398;
+    box-shadow: 7px 7px 20px 1px rgba(112, 240, 206, 0.5);
 }
 
 @keyframes fadeInLeft {
