@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/20-portfolio/static/css/main.dd344292.css",
-    "main.js": "/20-portfolio/static/js/main.63ca6421.js",
+    "main.css": "/20-portfolio/static/css/main.8da2e50b.css",
+    "main.js": "/20-portfolio/static/js/main.835527a5.js",
+    "static/media/Speakeasy-Screenshot.png": "/20-portfolio/static/media/Speakeasy-Screenshot.c33cec00f677265b1ee3.png",
+    "static/media/Austing Lake.jpg": "/20-portfolio/static/media/Austing Lake.1a628e039ccfeedea2a8.jpg",
+    "static/media/muir woods.jpg": "/20-portfolio/static/media/muir woods.c5c92785d27b8ae7e259.jpg",
+    "static/media/Trip SanFrancisco2.jpg": "/20-portfolio/static/media/Trip SanFrancisco2.4918379a6c6b68d272fc.jpg",
     "static/media/Oliver FullStack Resume 2023.pdf": "/20-portfolio/static/media/Oliver FullStack Resume 2023.379e984797fbb03a023a.pdf",
     "index.html": "/20-portfolio/index.html",
-    "main.dd344292.css.map": "/20-portfolio/static/css/main.dd344292.css.map",
-    "main.63ca6421.js.map": "/20-portfolio/static/js/main.63ca6421.js.map"
+    "main.8da2e50b.css.map": "/20-portfolio/static/css/main.8da2e50b.css.map",
+    "main.835527a5.js.map": "/20-portfolio/static/js/main.835527a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd344292.css",
-    "static/js/main.63ca6421.js"
+    "static/css/main.8da2e50b.css",
+    "static/js/main.835527a5.js"
   ]
 }
