@@ -17,7 +17,7 @@ function Project( {grpProjects} ) {
           display: 'inline-block',
         }}
       >
-        My Projects!
+      Projects!
       </h1>
       <div className='map-container'>
           {grpProjects.map((project) => (
@@ -38,12 +38,12 @@ function Project( {grpProjects} ) {
                     zIndex: '3',
                     fontSize: '20px',
                     textShadow:
-                      '-1px 0 #FF9398, 0 1px #FF9398, 1px 0 #FF9398, 0 -1px #FF9398',
+                      '-1px 0 #d26ffc, 0 1px #d26ffc, 1px 0 #d26ffc, 0 -1px #d26ffc',
                   }}
                 >
                   <b
                     style={{
-                      color: '#FF9398',
+                      color: '#d26ffc',
                       fontSize: '45px',
                       textDecoration: 'underline',
                       textShadow:
@@ -62,7 +62,7 @@ function Project( {grpProjects} ) {
                   style={{
                     zIndex: '4',
                     fontSize: '20px',
-                    backgroundColor: '#FF9398',
+                    backgroundColor: '#d26ffc',
                     border: '1px solid black',
                   }}
                   href={project.link}
@@ -76,7 +76,7 @@ function Project( {grpProjects} ) {
                   style={{
                     zIndex: '4',
                     fontSize: '20px',
-                    backgroundColor: '#FF9398',
+                    backgroundColor: '#d26ffc',
                     border: '1px solid black',
                   }}
                   href={project.github}
