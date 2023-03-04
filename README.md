@@ -98,6 +98,8 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 
 ### Built With
 
+[![React Shield](https://img.shields.io/badge/React-00bfff?&style=for-the-badge&logo=react&logoColor=lightblue)](https://developer.mozilla.org/en-US/docs/Web/React)
+[![GitHub Shield](https://img.shields.io/badge/GitHub-121011?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/) 
 [![Express Shield](https://img.shields.io/badge/Express-000000?&style=for-the-badge&logo=express&logoColor=white)](http://expressjs.com/)
 [![Webpack Shield](https://img.shields.io/badge/WebPack-8DD6F9?&style=for-the-badge&logo=webpack&logoColor=333333)](https://webpack.js.org/)
 [![JavaScript Shield](https://img.shields.io/badge/JavaScript-F7DF1E?&style=for-the-badge&logo=javascript&logoColor=272727)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
