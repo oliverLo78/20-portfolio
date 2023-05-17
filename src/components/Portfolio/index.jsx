@@ -1,5 +1,5 @@
 import React from 'react';
-import portfolio from './portfolio.css'
+import portfolio from './portfolio.css';
 import pdf from '../../images/Oliver FullStack Resume 2023.pdf';
 
 function Project( {grpProjects} ) {
