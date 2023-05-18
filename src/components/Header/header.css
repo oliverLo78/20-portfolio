@@ -114,7 +114,7 @@
 
 .navBar {
     position: relative;
-    display: none;
+    display: flex;
   }
   
   .navBar button {
@@ -137,7 +137,7 @@
     bottom: 0;
     height: 100vh;
     width: 0;
-    overflow: hidden;
+    overflow: visible;
     max-width: 350px;
     z-index: 9;
   }
