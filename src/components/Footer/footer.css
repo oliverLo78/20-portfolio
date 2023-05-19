@@ -2,30 +2,30 @@
     background: linear-gradient(0.25turn, rgba(172, 218, 55, 0.5), rgba(112, 240, 206, 0.5));
 }
 .container-fluid {
-    --bs-gutter-x: 1.5rem;
+
     --bs-gutter-y: 0;
     width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-right: auto;
     margin-left: auto;
-    bottom: 0;
 }
 
-/* .footer-ul {
+.footer-ul {
     display: flex;
     width: 100%;
     text-align: center;
     align-items: center;
     justify-content: center;
-} */
+} 
 
-.footer-ul {
-    list-style-type: none; 
+.footer-container {
+    display: flex; 
     padding-right: 30px;
     padding-left: 30px;
-    cursor: pointer;
-    font-size: 44px;
+    align-items: center;
+    bottom: 0;
+    flex-wrap: wrap;
 } 
 
 .footer-li {

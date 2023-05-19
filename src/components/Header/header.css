@@ -132,7 +132,7 @@
     list-style: none;
     position: fixed;
     top: 0;
-    background: rgb(253, 217, 219);;
+    background: linear-gradient(0.25turn, rgba(172, 218, 55, 0.5), rgba(112, 240, 206, 0.5));
     right: -10%;
     bottom: 0;
     height: 100vh;

@@ -14,10 +14,10 @@ const Footer = () => {
           <li className='footer-li'><a href='https://www.linkedin.com/in/oliver-lopez78/' target='_blank' rel='noreferrer'>
             <i className='fa fa-linkedin'></i>
           </a></li>
-          <li style={{display: 'flex', alignItems: 'center', cursor: 'auto'}} className='footer-li'>
+        </ul>
+        <li style={{display: 'flex', alignItems: 'center', cursor: 'auto'}} className='footer-li'>
             <a href= "mailto: 'oliverberto@gmail.com'" target='_blank' rel='noreferrer'>
               <i className='fa-solid fa-envelope'></i></a><span className='hide' style={{ cursor: 'auto', fontSize: '20px', textDecoration: 'none', color: '#000', paddingLeft: '10px' }}>oliverberto@gmail.com</span></li>
-        </ul>
       </div>
   );
 }
