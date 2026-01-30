@@ -1,5 +1,5 @@
-import React from 'react';
-import portfolio from './portfolio.css';
+import React from "react";
+import "./portfolio.css";
 import pdf from '../../../public/assets/Website Frontend Developer Oliver.pdf'
 
 function Project( {grpProjects} ) {
@@ -111,7 +111,7 @@ function Project( {grpProjects} ) {
       </div>
         <a
         className="fade-in-animation"
-        href="/20-portfolio/assets/Oliver-Lopez-Frontend-Resume-2026.pdf"
+        href="/20-portfolio/assets/Website Frontend Developer Oliver Lopez.pdf"
         target="_blank"
         rel="noreferrer"
         download

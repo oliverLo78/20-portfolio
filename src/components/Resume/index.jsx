@@ -17,15 +17,15 @@ function SkillsDiv(props) {
           My Qualifications:
         </h4>
         <p>
-          At least 6 months of experience (Bootcamp attendance/graduation counts toward this requirement)
+         Migrated portfolio from Create React App to Vite + React 19, improving build speed and modernizing deployment to GitHub Pages.
         </p>
       <hr />
       <p className="mb-0">
-        Bootcamp Graduate of the 3-month course. Able to learn and master new skills quickly and effectively.
+        Built a component-driven UI with reusable sections (About/Portfolio/Skills/Contact) and responsive layout using Bootstrap.
       </p>
       <hr />
       <p>
-        Some familiarity with most or all the technologies associated with selected program
+        Implemented a production-ready contact flow using EmailJS, form validation, and accessible input labeling.
       </p>
       <hr />
       <p className="mb-0">
