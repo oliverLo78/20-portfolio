@@ -1,7 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig({
-  plugins: [react()],
-  base: "/20-portfolio/",
+export default defineConfig(() => {
+  const isGhPages = process.env.DEPLOY_TARGET === "ghpages";
+
+  return {
+    plugins: [react()],
+    base: isGhPages ? "/20-portfolio/" : "/",
+  };
 });
