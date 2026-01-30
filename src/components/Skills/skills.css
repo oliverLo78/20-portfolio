@@ -1,45 +1,100 @@
+/* ---------- Layout ---------- */
+
 .skills-container {
-    /* background-image: url('../../images/background1.jpg');
-    background-size: cover; */
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  padding: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
+/* Main content card */
 .right-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    animation: fadeInLeft 1s ease-in-out;
-    background-color:rgba(112, 240, 206, 0.5);
-    margin-right: 30px;
-    box-shadow: 5px 10px 20px #000;
+  width: min(900px, 100%);
+  padding: 2rem 1.75rem;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+
+  animation: riseIn 420ms ease both;
 }
 
-
-@keyframes fadeInRight {
-    0% {
-    transform: translateX(1000px);
-    }
-    100% {
-    transform: translateX(0);
-    }
+/* Headings */
+.right-side h1 {
+  margin: 0.25rem 0 1rem;
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  letter-spacing: 0.2px;
 }
 
-@media screen and (max-width: 1919px) {
-    .skills-container {
-        overflow: scroll;
-    }
+.right-side h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.35rem;
+  font-weight: 800;
 }
+
+/* List */
+.skills-list {
+  width: 100%;
+  max-width: 820px;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.soft-skills {
+  margin-top: 1.25rem;
+}
+
+.soft-skills span {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* ---------- Motion (accessible) ---------- */
+
+@keyframes riseIn {
+  from {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .right-side {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* ---------- Responsive ---------- */
 
 @media screen and (max-width: 850px) {
-    .right-side {
-        width: 85%;
-    }
+  .skills-container {
+    padding: 1rem;
+  }
+
+  .right-side {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .skills-list {
+    padding-left: 1.1rem;
+  }
 }
