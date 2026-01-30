@@ -1,73 +1,52 @@
-// First we import 'useState' with React hook method that are immediately available to components
-import React, { useState } from 'react';
+import React, { useMemo, useState } from "react";
+import "./styles/App.css";
+import grpProjects from "./group-projects";
 
-import './styles/App.css';
-import grpProjects from './group-projects';
+import Header from "./components/Header";
+import About from "./components/About";
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Skills from "./components/Skills";
 
-// import './components/NavTabs/index';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+const pages = [
+  { bg: "prj-one", component: About },
+  { bg: "prj-two", component: Portfolio },
+  { bg: "prj-three", component: Skills },
+  { bg: "prj-four", component: Contact },
+];
 
+export default function App() {
+  const [pageIndex, setPageIndex] = useState(0);
 
-// Importing components from the components folder
-import Header from './components/Header';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Skills from './components/Skills';
+  const CurrentPage = pages[pageIndex].component;
+  const bgClass = pages[pageIndex].bg;
 
-function App() {
+  const pageProps = useMemo(() => {
+    if (CurrentPage === Portfolio) return { grpProjects };
+    return {};
+  }, [CurrentPage]);
 
-  const [ pageIndex, setPageIndex ] = useState(0);
+  return (
+    <div
+      className={bgClass}
+      style={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <Header
+        showAbout={() => setPageIndex(0)}
+        showProjects={() => setPageIndex(1)}
+        showSkills={() => setPageIndex(2)}
+        showContact={() => setPageIndex(3)}
+      />
 
-  const NavTabs = () => {
-      if ( pageIndex === 0 ) {
-      return<About />
-      }
+      <CurrentPage {...pageProps} />
 
-      if ( pageIndex === 1 ) {
-      return<Portfolio grpProjects={grpProjects}/>
-      }
-
-      if ( pageIndex === 2 ) {
-      return<Skills />
-      }
-
-      if ( pageIndex === 3 ) {
-      return<Contact />
-      }
-    }
-
-  const tripPics = () => {
-
-      if ( pageIndex === 0 ) {
-      return'prj-one'
-      } 
-      
-      if ( pageIndex === 1 ) {
-      return'prj-two'
-      }
-      
-      if ( pageIndex === 2 ) {
-        return'prj-three'
-      }  
-
-      if ( pageIndex === 3 ) {
-        return'prj-four'
-      }  
-    }      
-      return (
-        <div className={tripPics()} style={{height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-          <Header
-            showAbout={() => setPageIndex(0)}
-            showProjects={() => setPageIndex(1)}
-            showSkills={() => setPageIndex(2)}
-            showContact={() => setPageIndex(3)}
-          />
-          {NavTabs()}
-          <Footer />
-          </div>
-      )
+      <Footer />
+    </div>
+  );
 }
-
-export default App;
