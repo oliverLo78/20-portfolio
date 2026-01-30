@@ -1,6 +1,6 @@
 import React from 'react';
 import portfolio from './portfolio.css';
-import pdf from '../../images/Oliver FullStack Resume 2023.pdf';
+import pdf from '../../../public/assets/Website Frontend Developer Oliver.pdf'
 
 function Project( {grpProjects} ) {
   
@@ -109,7 +109,16 @@ function Project( {grpProjects} ) {
           ))}
         </div>
       </div>
-      <a className='fade-in-animation' href={pdf} target='_blank' rel="noreferrer" download>Download My Resume!</a>
+        <a
+        className="fade-in-animation"
+        href="/20-portfolio/assets/Oliver-Lopez-Frontend-Resume-2026.pdf"
+        target="_blank"
+        rel="noreferrer"
+        download
+        >
+        Download My Resume!
+        </a>
+
       </div>
     );
 }
