@@ -1,23 +1,60 @@
-import React from 'react';
-import './about.css';
-import headshot from  '../../images/oliver ProfilePic-sm.jpg';
+import React from "react";
+import "./about.css";
+import headshot from "../../images/oliver-profile.jpg";
 
-function About() {
-    return (
-      <div className="about-container">
-          <div className="left-side">
-          <img className="headshot" src={headshot} alt="Oliver Lopez"></img>
-          <h1 style={{fontSize: '60px'}}>About Me!</h1>
-          <p className="mt-5" style={{width: '80%', fontSize: '20px'}}>
-          Hi my name is Oliver  Ready to embark on the journey of Software Engineer. I enjoy creating Websites and software applications to improve the end user experience. Very excited to be a part of UCF coding bootcamp. A catalyst with plenty of energy in learning HTML & CSS and Git, JavaScript & Web APIs, Node.js.</p><br></br>
-          <p className='mt-5'style={{width: '80%', fontSize: '20px'}}>I enjoy visiting beautiful islands like Punta Cana, Bora Bora, trying out new recipes, and training on Gracie Jiu-Jitsu for self delf. Project manager with leadership experience and technical know-how. Previous experience includes project manager for a general contractor company in Winter Garden FL, ANC Roofing, where I oversaw the execution of weekly re-roofs and managed a team of seven-five crew members.</p><br></br>
-          <p className='mt-5' style={{width: '80%', fontSize: '20px'}}>Additionally, I completed the Web Developer Certificate at the University of Central Florida, where I developed knowledge and experience in Scrum and Agile frameworks as well as Software and Project Management lifecycles, among others. Planned, developed, and successfully executed projects, deployed by Heroku, and have led teams in previous roles of varying size to meet company goals. Excited to combine technical training and management experience to continue leading teams to success.</p>
-          </div>
+export default function About() {
+  return (
+    <section className="about-container">
+      <div className="left-side">
+        <img
+          className="headshot"
+          src={headshot}
+          alt="Oliver Lopez – Front-End Developer"
+        />
+
+        <h1 className="about-title">About Me</h1>
+
+        <p className="about-text">
+          Hi, I’m <strong>Oliver Lopez</strong> — a <strong>Front-End Developer</strong> focused on building modern, accessible, and user-friendly web applications using <strong>React</strong>, modern JavaScript, and responsive UI systems.
+        </p>
+
+        <p className="about-text">
+          I specialize in translating ideas and designs into clean, maintainable
+          interfaces that prioritize performance, usability, and real-world
+          business needs. I enjoy working with component-driven architectures,
+          modern tooling, and iterative UI improvements that enhance the end-user
+          experience.
+        </p>
+
+        <p className="about-text">
+          Before transitioning fully into software development, I worked as a
+          <strong> Project Manager</strong> in the construction industry, where I
+          led cross-functional teams, managed timelines, and delivered projects
+          under real operational constraints. That background gives me a strong
+          sense of ownership, communication, and accountability in technical
+          projects.
+        </p>
+
+        <p className="about-text">
+          I hold a <strong>Web Development Certificate</strong> from the
+          University of Central Florida and have hands-on experience with Agile
+          workflows, Scrum ceremonies, and collaborative development practices.
+          I’ve built and deployed multiple full-stack and front-end projects,
+          and I’m continuously refining my skills with modern React patterns and
+          tooling.
+        </p>
+
+        <p className="about-text">
+          Outside of coding, I enjoy traveling, experimenting with new recipes,
+          training in Gracie Jiu-Jitsu, and staying active. I’m driven by
+          continuous learning and enjoy building products that are both
+          technically sound and genuinely useful.
+        </p>
       </div>
-      )
-  }
+    </section>
+  );
+}
 
-export default About;
 
 
 
