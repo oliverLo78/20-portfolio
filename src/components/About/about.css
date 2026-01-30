@@ -1,59 +1,104 @@
+/* ---------- Layout ---------- */
+
 .about-container {
-    /* background-image: url('../../images/background1.jpg');
-    background-size: cover; */
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    overflow: visible;
+  width: 100%;
+  min-height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
+/* Main content card */
 .left-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    animation: fadeInLeft 1s ease-in-out;
-    background-color:rgba(112, 240, 206, 0.5);
-    margin-right: 30px;
-    box-shadow: 5px 10px 20px #000;
+  width: min(900px, 100%);
+  padding: 2rem 1.75rem;
+  border-radius: 18px;
+
+  /* modern glass */
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+
+  animation: riseIn 420ms ease both;
 }
+
+/* Title spacing (optional if you add .about-title in About.jsx) */
+.about-title {
+  margin-top: 1rem;
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  letter-spacing: 0.2px;
+}
+
+/* Paragraphs (optional if you add .about-text in About.jsx) */
+.about-text {
+  width: 100%;
+  max-width: 820px;
+  margin-top: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  opacity: 0.95;
+}
+
+/* ---------- Headshot ---------- */
 
 .headshot {
-    height: 300px;
-    width: 300px; 
-    border: 2px solid #000;
-    animation: fadeInLeft 1.5s ease-in-out;
-    box-shadow: 7px 7px 20px 1px rgba(112, 240, 206, 0.5);
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  object-fit: cover;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+
+  animation: riseIn 520ms ease both;
 }
 
-@keyframes fadeInLeft {
-    0% {
-    transform: translateX(1000px);
-    }
-    100% {
-    transform: translateX(0);
-    }
+/* ---------- Motion ---------- */
+
+@keyframes riseIn {
+  from {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-@media screen and (max-width: 1919px) {
-    .about-container {
-        overflow: scroll;
-    }
+@media (prefers-reduced-motion: reduce) {
+  .left-side,
+  .headshot {
+    animation: none;
+    transition: none;
+  }
 }
+
+/* ---------- Responsive ---------- */
 
 @media screen and (max-width: 850px) {
-    /* .headshot {
-        height: 150px;
-        width: 150px;
-    } */
-    .left-side {
-        width: 85%;
-    }
-    .headshot {
-        margin: 20px 0px;
-    }
+  .about-container {
+    padding: 1rem;
+  }
+
+  .left-side {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .headshot {
+    width: 180px;
+    height: 180px;
+    margin: 0.25rem 0 0.75rem;
+  }
 }
+
+/* You had overflow scroll rules; remove those for a cleaner feel.
+   If you truly need scroll, you can set it on a specific wrapper instead. */
