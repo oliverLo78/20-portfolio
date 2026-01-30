@@ -1,113 +1,145 @@
-import React, { useState, useRef } from 'react';
-// import Contact from './components/utils';
-import emailjs from '@emailjs/browser';
-import  Modal from 'react-bootstrap/Modal';
+import React, { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
-// Here we import a helper function that will check if the email is valid
-// import { checkMessage, validateEmail } from '../../utils/helpers';
+export default function Contact() {
+  const [isOpen, setIsOpen] = useState(false);
+  const form = useRef(null);
+  const closeBtnRef = useRef(null);
 
- function Contact() {
-  // Create state variables for the fields in the form
-  // We are also setting their initial values to false
-  const [email, setEmail] = useState('false');
+  const messageClose = () => setIsOpen(false);
+  const messageOpen = () => setIsOpen(true);
 
-  const messageClose = () => setEmail(false); 
-  const messageOpen = () => setEmail(true);
-  
-   const form = useRef();
-  
-   const sendEmail = (e) => {
-      e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-      emailjs.sendForm('service_yxf1m8j', 'template_92yyfem', form.current, 'RQhNo667QGSlWoBNi')
-       .then((result) => {
-         console.log(result.text);
-         messageOpen();
-         e.target.reset();
-     }, (error) => {
-         console.log(error.text);
-     });
- }
-  
+    emailjs
+      .sendForm(
+        "service_yxf1m8j",
+        "template_92yyfem",
+        form.current,
+        "RQhNo667QGSlWoBNi"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          messageOpen();
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  // ESC closes modal + focus management (nice accessibility touch)
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") messageClose();
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    closeBtnRef.current?.focus();
+
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isOpen]);
+
   return (
     <div className="contact-container">
       <div className="contact-wrapper">
-      <h1 style={{ fontSize: '60px'}}>Contact Me!</h1>
-    <form className="contact-form" ref={form} onSubmit={sendEmail}>
-        <div className='top-form'>
-        <i className='fa-solid fa-envelope custom-envelope'></i>
-        <div className='top-form-inputs'>
-          <label className="form-label">Name:</label>
-          <input type="text" name="user-name" className='text-inputs' required />
-          <label className="form-label">Email Address:</label>
-          <input type="email" name="user-email" className='text-inputs' required />
-        </div>
+        <h1 style={{ fontSize: "60px" }}>Contact Me!</h1>
+
+        <form className="contact-form" ref={form} onSubmit={sendEmail}>
+          <div className="top-form">
+            <i className="fa-solid fa-envelope custom-envelope" />
+
+            <div className="top-form-inputs">
+              <label className="form-label" htmlFor="user-name">
+                Name:
+              </label>
+              <input
+                id="user-name"
+                type="text"
+                name="user-name"
+                className="text-inputs"
+                required
+              />
+
+              <label className="form-label" htmlFor="user-email">
+                Email Address:
+              </label>
+              <input
+                id="user-email"
+                type="email"
+                name="user-email"
+                className="text-inputs"
+                required
+              />
+            </div>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
+            <label className="form-label" htmlFor="message">
+              Message
+            </label>
+            <textarea id="message" className="message-text" name="message" required />
+
+            <input className="send-btn" type="submit" value="Send" />
+          </div>
+        </form>
+
+        {/* Success Modal */}
+        {isOpen && (
+          <>
+            <div
+              className="modal-backdrop fade show"
+              onClick={messageClose}
+              aria-hidden="true"
+            />
+
+            <div
+              className="modal fade show d-block"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="message-sent-title"
+              onClick={messageClose}
+            >
+              <div
+                className="modal-dialog modal-dialog-centered"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="modal-content">
+                  <div className="modal-header" style={{ backgroundColor: "#cbfff5" }}>
+                    <h5 className="modal-title" id="message-sent-title">
+                      Message Sent!
+                    </h5>
+                    <button
+                      ref={closeBtnRef}
+                      type="button"
+                      className="btn-close"
+                      aria-label="Close"
+                      onClick={messageClose}
+                    />
+                  </div>
+
+                  <div className="modal-body">
+                    <p className="mb-0">
+                      Thanks for reaching out — I’ll get back to you soon.
+                    </p>
+                  </div>
+
+                  <div className="modal-footer">
+                    <button type="button" className="btn btn-primary" onClick={messageClose}>
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', width: '100%'}}>
-      <label className='form-label'>Message</label>
-      <textarea className='message-text' name="message" required />
-        <input className='send-btn' type="submit" value="Send" />
-         <label class="form-label">Message:</label>
-      </div>
-    </form>
-    
-    <Modal email={email} onHide={messageClose}>
-      <Modal.Header closeButton style={{ backgroundColor: '#cbfff5', borderRadius: '5px' }}>
-          <Modal.Title>Message Sent!</Modal.Title>
-      </Modal.Header>
-    </Modal>
     </div>
-  </div>
-  )
+  );
 }
-
-export default Contact;
-
-/******************************************************************************************************************************* */
-// import React from 'react';
-// import LinkedInIcon from "@material-ui/icons/LinkedIn";
-// import GithubIcon from '@material-ui/icons/GitHub';
-// import TwitterIcon from '@material-ui/icons/Twitter';
-// import EmailIcon from '@material-ui/icons/Email';
-
-// // React
-// import { 
-//   Card,
-//   CardImg,
-//   CardImgOverlay,
-//   CardTitle,
-//   CardText
-//  } from 'reactstrap';
-
-// export default function Contact() {
-// return (
-// <div>
-//   <Card inverse>
-//     <CardImg
-//       alt="Card image cap"
-//       src="https://source.unsplash.com/random"
-//       style={{
-//         height: 750
-//       }}
-//       width="100%"
-//     />
-//     <CardImgOverlay>
-//       <CardTitle tag="h5">
-//       Have a question?
-//       </CardTitle>
-//       <CardText>
-//         Let's get to know each other. How can I be useful to your service?
-//         Please feel free to reach out to me. I would be delighted to answer all your questions or concerns.
-//       </CardText>
-//       <LinkedInIcon onClick={() => window.open('https://www.linkedin.com/in/oliver-lopez78/')}/>
-//       <EmailIcon onClick={() => window.open('mailto:oliverberto@gmail.com')}/>
-//       <GithubIcon onClick={() => window.open('https://github.com/oliverLo78')}/>
-//       <TwitterIcon />
-//     </CardImgOverlay>
-//   </Card>
-// </div>
-// );
-//     }
-
-
-    
