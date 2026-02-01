@@ -1,54 +1,70 @@
+/* ---------- Footer Layout ---------- */
+
 .footer-background {
-    background: linear-gradient(0.25turn, rgba(172, 218, 55, 0.5), rgba(112, 240, 206, 0.5));
-}
-.container-fluid {
+  width: 100%;
+  padding: 1rem 2rem;
 
-    --bs-gutter-y: 0;
-    width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
-    margin-right: auto;
-    margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.25);
 }
 
-.footer-ul {
-    display: flex;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-} 
+/* ---------- Social Links ---------- */
 
 .footer-container {
-    display: flex; 
-    padding-right: 30px;
-    padding-left: 30px;
-    align-items: center;
-    bottom: 0;
-    flex-wrap: wrap;
-} 
-
-.footer-li {
-    list-style-type: none; 
-    padding-right: 30px;
-    padding-left: 30px;
-    cursor: pointer;
-    font-size: 44px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
 }
- /* .footer-li {
-    margin-right: 40px;
-    cursor: pointer; 
-    font-size: 45px;
-    position: relative;
-    border: 1px solid black;
-    padding-left: 30px;
-    padding-right: 33px;
-    z-index: 1;
-    overflow: hidden;
-}  */
+
+.footer-li a {
+  font-size: 1.5rem;
+  opacity: 0.7;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.footer-li a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* ---------- Email ---------- */
+
+.footer-email {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.footer-email a {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.footer-email a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
 
 @media screen and (max-width: 700px) {
-    .hide {
-        display: none;
-    }
-} 
+  .footer-background {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+}

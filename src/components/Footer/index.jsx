@@ -1,25 +1,52 @@
-import React from 'react';
-import './footer.css'
+import React from "react";
+import "./footer.css";
 
 const Footer = () => {
-  return ( 
-    <div className='container-fluid d-flex justify-content-between footer-background'>
-        <ul className='footer-container'>
-          <li className='footer-li'><a href='https://twitter.com' target='_blank' rel='noreferrer'>
-            <i className='fa fa-twitter'></i></a>
-          </li>
-          <li className='footer-li'><a href='https://github.com' target='_blank' rel='noreferrer'>
-            <i className='fa fa-github'></i>
-          </a></li>
-          <li className='footer-li'><a href='https://www.linkedin.com/in/oliver-lopez78/' target='_blank' rel='noreferrer'>
-            <i className='fa fa-linkedin'></i>
-          </a></li>
-        </ul>
-        <li style={{display: 'flex', alignItems: 'center', cursor: 'auto'}} className='footer-li'>
-            <a href= "mailto: 'oliverberto@gmail.com'" target='_blank' rel='noreferrer'>
-              <i className='fa-solid fa-envelope'></i></a><span className='hide' style={{ cursor: 'auto', fontSize: '20px', textDecoration: 'none', color: '#000', paddingLeft: '10px' }}>oliverberto@gmail.com</span></li>
+  return (
+    <footer className="footer-background">
+      <ul className="footer-container">
+        <li className="footer-li">
+          <a
+            href="https://github.com/oliverLo78"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub Profile"
+          >
+            <i className="fa-brands fa-github" />
+          </a>
+        </li>
+
+        <li className="footer-li">
+          <a
+            href="https://www.linkedin.com/in/oliver-lopez78/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn Profile"
+          >
+            <i className="fa-brands fa-linkedin" />
+          </a>
+        </li>
+
+        <li className="footer-li">
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Twitter Profile"
+          >
+            <i className="fa-brands fa-twitter" />
+          </a>
+        </li>
+      </ul>
+
+      <div className="footer-email">
+        <i className="fa-solid fa-envelope" />
+        <a href="mailto:oliverberto@gmail.com">
+          oliverberto@gmail.com
+        </a>
       </div>
+    </footer>
   );
-}
+};
 
 export default Footer;
