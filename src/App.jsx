@@ -38,9 +38,10 @@ export default function App() {
       }}
     >
       <Header
+        currentPage={pageIndex}
         showAbout={() => setPageIndex(0)}
         showProjects={() => setPageIndex(1)}
-        showSkills={() => setPageIndex(2)}
+        showResume={() => setPageIndex(2)}
         showContact={() => setPageIndex(3)}
       />
 

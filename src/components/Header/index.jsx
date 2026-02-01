@@ -1,42 +1,98 @@
 import React, { useState } from "react";
-import './header.css'
+import "./header.css";
 
-const Header = ({ showAbout, showProjects, showSkills, showContact }) => {
+const Header = ({
+  currentPage,
+  showAbout,
+  showProjects,
+  showResume,
+  showContact,
+}) => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    const [menuOpen, setMenuOpen] = useState(false)
+  const handleMenu = () => setMenuOpen((prev) => !prev);
+  const closeMenu = () => setMenuOpen(false);
 
-    const handleMenu = () => {
-        setMenuOpen(prev => !prev)
-      }
-      
-      const closeMenu = () => {
-        setMenuOpen(false)
-      }
+  const navItemClass = (index) =>
+    index === currentPage ? "header-ul-li active" : "header-ul-li";
 
-    return (
-        <div className="container-fluid d-flex justify-content-between header-background">
-            <div className="name-header">
-                <h2 className='first-name'></h2><h2 className="last-name"></h2>
-            </div>
-            <h2 className="title">Web Developer</h2>
-            <ul className="header-ul">
-                <li className="header-ul-li" onClick={showAbout}>About</li>
-                <li className="header-ul-li" onClick={showProjects}>Projects</li>
-                <li className="header-ul-li" onClick={showSkills}>Skills</li>
-                <li className="header-ul-li" onClick={showContact}>Contact Me</li>
-            </ul>
+  return (
+    <header className="container-fluid d-flex justify-content-between header-background">
+      {/* Name / Branding */}
+      <div className="name-header">
+        <h2 className="first-name">Oliver</h2>
+        <h2 className="last-name">Lopez</h2>
+      </div>
 
-            <nav className="navBar">
-                <button onClick={handleMenu}>{menuOpen ? <i className="fa-solid fa-x header-icons" style={{color: '#000'}}></i> : <i className="fa-solid fa-bars header-icons"></i>}</button>
-                <ul className={`menuNav ${menuOpen ? " showMenu" : ""}`}>
-                    <li className="header-ul-li menustyles" onClick={() => {showAbout(); closeMenu()}}>About</li>
-                    <li className="header-ul-li menustyles" onClick={() => {showProjects(); closeMenu()}}>Projects</li>
-                     <li className="header-ul-li menustyles" onClick={() => {showSkills(); closeMenu()}}>Skills</li>
-                    <li className="header-ul-li menustyles" onClick={() => {showContact(); closeMenu()}}>Contact Me</li>
-                </ul>
-            </nav>
-        </div>
-    )
-}
+      <h2 className="title">Front-End Developer</h2>
+
+      {/* Desktop Nav */}
+      <ul className="header-ul">
+        <li className={navItemClass(0)} onClick={showAbout}>
+          About Me
+        </li>
+        <li className={navItemClass(1)} onClick={showProjects}>
+          Portfolio
+        </li>
+        <li className={navItemClass(2)} onClick={showResume}>
+          Resume
+        </li>
+        <li className={navItemClass(3)} onClick={showContact}>
+          Contact
+        </li>
+      </ul>
+
+      {/* Mobile Nav */}
+      <nav className="navBar">
+        <button onClick={handleMenu} aria-label="Toggle navigation">
+          {menuOpen ? (
+            <i className="fa-solid fa-x header-icons" />
+          ) : (
+            <i className="fa-solid fa-bars header-icons" />
+          )}
+        </button>
+
+        <ul className={`menuNav ${menuOpen ? "showMenu" : ""}`}>
+          <li
+            className={navItemClass(0)}
+            onClick={() => {
+              showAbout();
+              closeMenu();
+            }}
+          >
+            About Me
+          </li>
+          <li
+            className={navItemClass(1)}
+            onClick={() => {
+              showProjects();
+              closeMenu();
+            }}
+          >
+            Portfolio
+          </li>
+          <li
+            className={navItemClass(2)}
+            onClick={() => {
+              showResume();
+              closeMenu();
+            }}
+          >
+            Resume
+          </li>
+          <li
+            className={navItemClass(3)}
+            onClick={() => {
+              showContact();
+              closeMenu();
+            }}
+          >
+            Contact
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
 export default Header;
