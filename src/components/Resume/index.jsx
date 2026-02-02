@@ -1,49 +1,67 @@
 import React from "react";
-import { Toast, ToastHeader, ToastBody, Alert } from "reactstrap";
+import "./resume.css";
 
-function SkillsDiv(props) {
+const Resume = () => {
   return (
-    <div className="p-3 bg-info my-2 rounded">
-      <Toast>
-        <ToastHeader icon="info">
-          Reactstrap awesomesauce {props.name}
-        </ToastHeader>
-        <ToastBody>
-          Skills gained at UCF coding Bootcamp
-        </ToastBody>
-      </Toast>
-      <Alert color="primary">
-        <h4 className="alert-heading">
-          My Qualifications:
-        </h4>
-        <p>
-         Migrated portfolio from Create React App to Vite + React 19, improving build speed and modernizing deployment to GitHub Pages.
+    <section className="resume-container">
+      <div className="resume-card">
+        <h1>Resume</h1>
+
+        <p className="resume-intro">
+          Front-End Developer focused on building modern, accessible, and
+          responsive single-page applications with React and modern JavaScript.
         </p>
-      <hr />
-      <p className="mb-0">
-        Built a component-driven UI with reusable sections (About/Portfolio/Skills/Contact) and responsive layout using Bootstrap.
-      </p>
-      <hr />
-      <p>
-        Implemented a production-ready contact flow using EmailJS, form validation, and accessible input labeling.
-      </p>
-      <hr />
-      <p className="mb-0">
-        RESTful API/Constantly learning and improving/Computer literacy.
-      </p>
-      <hr />
-      <p>
-        Node.js/Teamwork/project management/: my background in managing projects from the planning to making it a reality is a plus in any industry.
-      </p>
-      <hr />
-      <p className="mb-0">
-        These are only a few of my accomplishments. I look forward to speaking with you in more detail about my experience, and I will follow up by email
-      </p>
-      <hr />
-    </Alert>
-  </div>
+
+        <a
+          className="resume-download"
+          href="/images/Oliver-Lopez-Frontend-Developer-Resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+          download
+        >
+          Download Resume (PDF)
+        </a>
+
+        <hr />
+
+        <h2>Core Proficiencies</h2>
+
+        <ul className="resume-list">
+          <li>React (Hooks, Component Architecture)</li>
+          <li>JavaScript (ES6+)</li>
+          <li>HTML5, CSS3, Responsive Design</li>
+          <li>Vite, GitHub Pages, Render</li>
+          <li>Bootstrap 5, Custom CSS Systems</li>
+          <li>Accessibility basics (labels, focus states)</li>
+          <li>Git & GitHub</li>
+        </ul>
+
+        <hr />
+
+        <h2>Experience Highlights</h2>
+
+        <p>
+          Migrated portfolio from Create React App to <strong>Vite + React 19</strong>,
+          improving build speed, maintainability, and deployment workflows.
+        </p>
+
+        <p>
+          Built a component-driven UI with reusable sections (About, Portfolio,
+          Resume, Contact) and responsive layouts using Bootstrap.
+        </p>
+
+        <p>
+          Implemented a production-ready contact flow using EmailJS, client-side
+          validation, and accessible form patterns.
+        </p>
+
+        <p>
+          Background in project management brings strong ownership,
+          communication, and delivery-focused thinking to technical work.
+        </p>
+      </div>
+    </section>
   );
+};
 
-}
-
-export default SkillsDiv;
+export default Resume;

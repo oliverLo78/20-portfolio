@@ -72,13 +72,22 @@ const Header = ({
             Portfolio
           </li>
           <li
-            className={navItemClass(2)}
+            className={navItemClass(1)}
             onClick={() => {
               showResume();
               closeMenu();
             }}
           >
             Resume
+          </li>
+          <li
+            className={navItemClass(2)}
+            onClick={() => {
+              showSkill();
+              closeMenu();
+            }}
+          >
+            Skills
           </li>
           <li
             className={navItemClass(3)}
