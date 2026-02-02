@@ -1,7 +1,7 @@
 
-import speakeasy from './images/Speakeasy-Screenshot.png';
-import rosetorough from './images/Rose-to-Rough reviews.png';
-import jubilee from './images/jubilee songs search.png'
+import speakeasy from '../public/images/speakeasy-screenshot.png';
+import rosetorough from '../public/images/rose-to-rough-reviews.png';
+import jubilee from '../public/images/jubilee-song-search.png'
 
 const grpProjects = [
     {
@@ -10,8 +10,8 @@ const grpProjects = [
         description: 'SpeakEasy project Discover classic cocktails or get information on you favorite one. See their ingredients and bio and also watch Youtube tutorials on creating them.',
         imagePath: speakeasy,
         imageAlt: 'Image of SpeakEasy App',
-        link: 'https://jkanvision.github.io/The-SpeakEasy-Project/',
-        github: 'https://github.com/jkanvision/The-SpeakEasy-Project.git',
+        link: 'https://oliverlo78.github.io/v2-SpeakEasy-Project/',
+        github: 'https://github.com/oliverLo78/v2-SpeakEasy-Project',
         technologies: 'HTML5, CSS3, JavaScript, jQuery, Bulma'
     },
     {

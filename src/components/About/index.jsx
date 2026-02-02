@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import headshot from "../../images/oliver ProfilePic.jpg";
+import headshot from "../../../public/images/oliver-profile-pic.jpg";
 
 export default function About() {
   return (

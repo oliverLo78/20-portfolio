@@ -16,6 +16,16 @@ const pages = [
   { bg: "prj-four", component: Contact },
 ];
 
+const backgrounds = [
+  "/images/trip-san-francisco.jpg",     // About Me
+  "/images/trip-san-francisco-2.jpg",   // Portfolio
+  "/images/muir-woods.jpg",             // Resume
+  "/images/atl-aquarium-2.jpg",             // Contact
+];
+
+// Randomize background per visit
+const pageBackgrounds = backgrounds.sort(() => 0.5 - Math.random());
+
 export default function App() {
   const [pageIndex, setPageIndex] = useState(0);
 
@@ -29,14 +39,12 @@ export default function App() {
 
   return (
     <div
-      className={bgClass}
+      className="app-shell"
       style={{
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+        backgroundImage: `url(${pageBackgrounds[pageIndex]})`,
       }}
     >
+
       <Header
         currentPage={pageIndex}
         showAbout={() => setPageIndex(0)}
@@ -45,8 +53,11 @@ export default function App() {
         showContact={() => setPageIndex(3)}
       />
 
-      <CurrentPage {...pageProps} />
-
+      {/* Main content grows to fill space */}
+      <main style={{ flex: 1 }}>
+        <CurrentPage {...pageProps} />
+      </main>
+      
       <Footer />
     </div>
   );

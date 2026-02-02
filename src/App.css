@@ -1,0 +1,36 @@
+html,
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*Fade transition subtle fade*/
+  transition: background-image 300ms ease-in-out;
+}
+
+/* Dark overlay for readability */
+.app-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
