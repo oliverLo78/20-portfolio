@@ -1,4 +1,14 @@
 /* ---------- Header Layout ---------- */
+.header-background,
+.footer-background {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.header-background a,
+.footer-background a,
+.header-background button {
+  color: rgba(255, 255, 255, 0.95);
+}
 
 .header-background {
   width: 100%;
@@ -97,12 +107,14 @@
 
 .header-icons {
   font-size: 1.6rem;
+  color: currentColor;
 }
 
 .navBar button {
-  background: none;
-  border: none;
-  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* Slide-in menu */
