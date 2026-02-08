@@ -46,9 +46,15 @@ const Header = ({
       <nav className="navBar">
         <button onClick={handleMenu} aria-label="Toggle navigation">
           {menuOpen ? (
-            <i className="fa-solid fa-x header-icons" />
+            <>
+              <i className="fa-solid fa-x header-icons" />
+              <span className="sr-only">Close</span>
+            </>
           ) : (
-            <i className="fa-solid fa-bars header-icons" />
+            <>
+              <i className="fa-solid fa-bars header-icons" />
+              <span className="sr-only">Menu</span>
+            </>
           )}
         </button>
 
