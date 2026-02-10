@@ -9,6 +9,8 @@ import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+const base = import.meta.env.BASE_URL;
+
 const pages = [
   { bg: "prj-one", component: About },
   { bg: "prj-two", component: Portfolio },
@@ -16,15 +18,15 @@ const pages = [
   { bg: "prj-five", component: Contact },
 ];
 
-const backgrounds = [
-  "/images/trip-san-francisco.jpg",     // About Me
-  "/images/trip-san-francisco-2.jpg",   // Portfolio
-  "/images/muir-woods.jpg",             // Resume
-  "/images/atl-aquarium-2.jpg",             // Contact
+const pageBackgrounds = [
+  `${base}/images/trip-san-francisco.jpg`,     // About Me
+  `${base}/images/trip-san-francisco-2.jpg`,   // Portfolio
+  `${base}/images/muir-woods.jpg`,             // Resume
+  `${base}/images/atl-aquarium-2.jpg`,             // Contact
 ];
 
 // Randomize background per visit
-const pageBackgrounds = backgrounds.sort(() => 0.5 - Math.random());
+const randomBackgrounds = backgrounds.sort(() => 0.5 - Math.random());
 
 export default function App() {
   const [pageIndex, setPageIndex] = useState(0);
