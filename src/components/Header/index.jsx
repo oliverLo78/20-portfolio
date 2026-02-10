@@ -6,7 +6,6 @@ const Header = ({
   showAbout,
   showProjects,
   showResume,
-  showSkills,
   showContact,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,9 +36,6 @@ const Header = ({
         </li>
         <li className={navItemClass(2)} onClick={showResume}>
           Resume
-        </li>
-        <li className={navItemClass(2)} onClick={showSkills}>
-          Skills
         </li>
         <li className={navItemClass(3)} onClick={showContact}>
           Contact
