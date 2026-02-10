@@ -11,11 +11,8 @@
 }
 
 .header-background {
-  width: 100%;
-  padding: 1rem 2rem;
-
   display: flex;
-  flex-wrap: nowrap;   /* prevents wrap */
+  flex-wrap: nowrap;   /* prevents wrap and 🔑 prevents stacking  */
   gap: 0.75rem;
 
   align-items: center;
@@ -89,7 +86,8 @@
   font-weight: 700;
   letter-spacing: 0.2px;
 
-  opacity: 0.7;
+  /* Desktop + mobile active style */
+  opacity: 1;      
   position: relative;
   transition: opacity 160ms ease;
 }
@@ -114,10 +112,15 @@
   border-radius: 999px;
 }
 
-/* ---------- Mobile Nav ---------- */
+/* Mobile active highlight */
+.menuNav .header-ul-li.active {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
 
+/* ---------- Mobile Nav ---------- */
 .navBar {
-  display: none;
   margin-left: auto;     /* forces it to the right */
   flex: 0, 0 auto;
 }
