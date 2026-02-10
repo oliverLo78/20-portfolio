@@ -133,8 +133,13 @@
 .navBar button {
   padding: 0.5rem;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.10);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: none !important;
+  border: none !important;
+}
+
+.hamburger {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 /* Slide-in menu */

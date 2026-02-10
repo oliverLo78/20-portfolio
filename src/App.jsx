@@ -18,7 +18,7 @@ const pages = [
   { bg: "prj-five", component: Contact },
 ];
 
-const pageBackgrounds = [
+const backgrounds = [
   `${base}/images/trip-san-francisco.jpg`,     // About Me
   `${base}/images/trip-san-francisco-2.jpg`,   // Portfolio
   `${base}/images/muir-woods.jpg`,             // Resume
@@ -26,7 +26,7 @@ const pageBackgrounds = [
 ];
 
 // Randomize background per visit
-const randomBackgrounds = backgrounds.sort(() => 0.5 - Math.random());
+const pageBackgrounds = backgrounds.sort(() => 0.5 - Math.random());
 
 export default function App() {
   const [pageIndex, setPageIndex] = useState(0);
