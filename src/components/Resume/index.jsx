@@ -1,5 +1,4 @@
 import React from "react";
-import { Toast, ToastHeader, ToastBody, Alert } from "reactstrap";
 
 function SkillsDiv(props) {
   return (
