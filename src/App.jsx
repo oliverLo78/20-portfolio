@@ -5,24 +5,22 @@ import grpProjects from "./group-projects";
 import Header from "./components/Header";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
-import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
-const base = import.meta.env.BASE_URL;
+import Skills from "./components/Skills";
 
 const pages = [
   { bg: "prj-one", component: About },
   { bg: "prj-two", component: Portfolio },
-  { bg: "prj-three", component: Resume },
-  { bg: "prj-five", component: Contact },
+  { bg: "prj-three", component: Skills },
+  { bg: "prj-four", component: Contact },
 ];
 
 const backgrounds = [
-  `${base}/images/trip-san-francisco.jpg`,     // About Me
-  `${base}/images/trip-san-francisco-2.jpg`,   // Portfolio
-  `${base}/images/muir-woods.jpg`,             // Resume
-  `${base}/images/atl-aquarium-2.jpg`,             // Contact
+  "/images/trip-san-francisco.jpg",     // About Me
+  "/images/trip-san-francisco-2.jpg",   // Portfolio
+  "/images/muir-woods.jpg",             // Resume
+  "/images/atl-aquarium-2.jpg",             // Contact
 ];
 
 // Randomize background per visit

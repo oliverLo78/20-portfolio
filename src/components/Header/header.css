@@ -1,20 +1,10 @@
 /* ---------- Header Layout ---------- */
-.header-background,
-.footer-background {
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.header-background a,
-.footer-background a,
-.header-background button {
-  color: rgba(255, 255, 255, 0.95);
-}
 
 .header-background {
-  display: flex;
-  flex-wrap: nowrap;   /* prevents wrap and 🔑 prevents stacking  */
-  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 2rem;
 
+  display: flex;
   align-items: center;
   justify-content: space-between;
 
@@ -25,21 +15,9 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
 /* ---------- Name / Branding ---------- */
 
 .name-header {
-  min-width: 0;
   display: flex;
   flex-direction: column;
   line-height: 1;
@@ -86,8 +64,7 @@
   font-weight: 700;
   letter-spacing: 0.2px;
 
-  /* Desktop + mobile active style */
-  opacity: 1;      
+  opacity: 0.7;
   position: relative;
   transition: opacity 160ms ease;
 }
@@ -112,34 +89,20 @@
   border-radius: 999px;
 }
 
-/* Mobile active highlight */
-.menuNav .header-ul-li.active {
-  opacity: 1;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-}
-
 /* ---------- Mobile Nav ---------- */
+
 .navBar {
-  margin-left: auto;     /* forces it to the right */
-  flex: 0, 0 auto;
+  display: none;
 }
 
 .header-icons {
   font-size: 1.6rem;
-  color: currentColor;
 }
 
 .navBar button {
-  padding: 0.5rem;
-  border-radius: 10px;
-  background: none !important;
-  border: none !important;
-}
-
-.hamburger {
-  font-size: 1.6rem;
-  color: rgba(255, 255, 255, 0.95);
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* Slide-in menu */

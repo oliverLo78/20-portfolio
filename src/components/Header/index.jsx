@@ -10,14 +10,14 @@ const Header = ({
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const navItemClass = (index, extra = "") =>
-    `${extra} header-ul-li${index === currentPage ? "active" : ""}`.trim();
-  
-  const handleMenu = () => setMenuOpen((p) => !p);
+  const handleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
 
+  const navItemClass = (index) =>
+    index === currentPage ? "header-ul-li active" : "header-ul-li";
+
   return (
-    <header className="container-fluidheader-background">
+    <header className="container-fluid d-flex justify-content-between header-background">
       {/* Name / Branding */}
       <div className="name-header">
         <h2 className="first-name">Oliver</h2>
@@ -45,14 +45,16 @@ const Header = ({
       {/* Mobile Nav */}
       <nav className="navBar">
         <button onClick={handleMenu} aria-label="Toggle navigation">
-            {/* No FontAwesome dependency: pure text icon */}
-          <span className="hamburger">{menuOpen ? "✕" : "☰"}</span>
-          <span className="sr-only">{menuOpen ? "Close menu" : "Open menu"}</span>
+          {menuOpen ? (
+            <i className="fa-solid fa-x header-icons" />
+          ) : (
+            <i className="fa-solid fa-bars header-icons" />
+          )}
         </button>
 
         <ul className={`menuNav ${menuOpen ? "showMenu" : ""}`}>
           <li
-            className={navItemClass(0, "menustyles")}
+            className={navItemClass(0)}
             onClick={() => {
               showAbout();
               closeMenu();
@@ -61,7 +63,7 @@ const Header = ({
             About Me
           </li>
           <li
-            className={navItemClass(1, "menustyles")}
+            className={navItemClass(1)}
             onClick={() => {
               showProjects();
               closeMenu();
@@ -70,7 +72,7 @@ const Header = ({
             Portfolio
           </li>
           <li
-            className={navItemClass(2, "menustyles")}
+            className={navItemClass(2)}
             onClick={() => {
               showResume();
               closeMenu();
@@ -79,7 +81,7 @@ const Header = ({
             Resume
           </li>
           <li
-            className={navItemClass(3, "menustyles")}
+            className={navItemClass(3)}
             onClick={() => {
               showContact();
               closeMenu();
