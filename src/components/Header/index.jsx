@@ -54,7 +54,7 @@ const Header = ({
 
         <ul className={`menuNav ${menuOpen ? "showMenu" : ""}`}>
           <li
-            className={navItemClass(0)}
+            className={`${navItemClass(0)} menustyles`}
             onClick={() => {
               showAbout();
               closeMenu();
@@ -63,7 +63,7 @@ const Header = ({
             About Me
           </li>
           <li
-            className={navItemClass(1)}
+            className={`${navItemClass(1)} menustyles`}
             onClick={() => {
               showProjects();
               closeMenu();
@@ -72,7 +72,7 @@ const Header = ({
             Portfolio
           </li>
           <li
-            className={navItemClass(2)}
+            className={`${navItemClass(2)} menustyles`}
             onClick={() => {
               showResume();
               closeMenu();
@@ -81,7 +81,7 @@ const Header = ({
             Resume
           </li>
           <li
-            className={navItemClass(3)}
+            className={`${navItemClass(3)} menustyles`}
             onClick={() => {
               showContact();
               closeMenu();

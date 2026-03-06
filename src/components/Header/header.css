@@ -1,18 +1,20 @@
 /* ---------- Header Layout ---------- */
 
 .header-background {
-  width: 100%;
-  padding: 1rem 2rem;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
+  color: rgba(255, 255, 255, 0.95);
 
-  background: rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+}
 
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+.header-background a,
+.header-background button,
+.header-icons {
+  color: rgba(255, 255, 255, 0.95);
 }
 
 /* ---------- Name / Branding ---------- */
@@ -48,6 +50,7 @@
 
 /* ---------- Desktop Navigation ---------- */
 
+
 .header-ul {
   display: flex;
   align-items: center;
@@ -59,11 +62,9 @@
 .header-ul-li {
   list-style: none;
   cursor: pointer;
-
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.2px;
-
   opacity: 0.7;
   position: relative;
   transition: opacity 160ms ease;
@@ -73,9 +74,19 @@
   opacity: 1;
 }
 
+.header-ul-li,
+.menuNav li {
+  padding: 8px 0;
+}
+
 /* Active section highlight (rubric requirement) */
 .header-ul-li.active {
+  font-weight: 700;
   opacity: 1;
+}
+
+.menuNav .active {
+  text-decoration: underline;
 }
 
 .header-ul-li.active::after {
@@ -93,6 +104,7 @@
 
 .navBar {
   display: none;
+  margin-left: auto;
 }
 
 .header-icons {
@@ -142,6 +154,7 @@
 .menustyles.active {
   opacity: 1;
   text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 /* ---------- Responsive ---------- */
